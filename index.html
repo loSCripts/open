@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Open Sport - StatsApp</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df259", 
+                        "secondary": "#60A5FA",
+                        "tertiary": "#FBBF24",
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#102216",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#182c1e",
+                        "text-light": "#111813",
+                        "text-dark": "#e1e6e3",
+                        "text-muted-light": "#608a6e",
+                        "text-muted-dark": "#8fa899",
+                    },
+                    fontFamily: { "display": ["Lexend", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .view-section { display: none; opacity: 0; transition: opacity 0.3s ease-in-out; }
+        .view-section.active { display: block; opacity: 1; }
+        .loader { border: 3px solid #f3f3f3; border-top: 3px solid #0df259; border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        /* Bannière d'alerte API */
+        #api-alert-banner {
+            display: none;
+            background-color: #ef4444; /* Rouge */
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        #api-success-banner {
+            display: none;
+            background-color: #0df259; /* Vert */
+            color: #102216;
+            text-align: center;
+            padding: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark min-h-screen flex flex-col">
+
+    <div id="api-alert-banner">
+        ⚠️ MODE HORS LIGNE : Les données affichées sont simulées. <br>
+        <span id="api-error-detail" class="text-xs font-normal opacity-90">Raison : Connexion API impossible</span>
+    </div>
+    <div id="api-success-banner">
+        ✅ CONNECTÉ : Données en direct de l'API SportDB
+    </div>
+
+    <header id="main-header" class="sticky top-0 z-50 w-full border-b border-text-muted-light/20 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm">
+        <nav class="container mx-auto flex items-center justify-between px-4 py-3">
+            <div class="flex items-center gap-4 cursor-pointer" onclick="navigateTo('view-sport')">
+                <span class="material-symbols-outlined text-primary">sports_soccer</span>
+                <h2 class="text-lg font-bold tracking-tight">Open Sport</h2>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="bg-gray-200 bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://i.pravatar.cc/150?img=33");'></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1 w-full relative">
+        
+        <section id="view-sport" class="view-section active container mx-auto px-4 py-8 max-w-6xl">
+            <div class="mb-8">
+                <h1 class="text-4xl font-black tracking-tight sm:text-5xl mb-2">Choisissez votre sport</h1>
+                <p class="text-text-muted-light">Sélectionnez un sport pour consulter les statistiques.</p>
+            </div>
+            <div class="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-6">
+                <div onclick="selectSport('Football')" class="flex flex-col gap-3 pb-3 group cursor-pointer hover:bg-surface-light/50 p-2 rounded-xl transition-colors">
+                    <div class="w-full aspect-square rounded-xl bg-gray-200 overflow-hidden relative shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1579952363873-27f3bde9be28?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg">Football</p>
+                        <p class="text-sm text-text-muted-light">Ligue 1, Premier League...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-country" class="view-section container mx-auto px-4 py-8 max-w-6xl">
+            <div class="flex items-center gap-2 mb-6 text-sm text-text-muted-light">
+                <button onclick="navigateTo('view-sport')" class="hover:text-primary hover:underline">Accueil</button>
+                <span>/</span>
+                <span class="font-semibold text-text-light">Football</span>
+            </div>
+            <div class="mb-8"><h1 class="text-4xl font-black tracking-tight mb-2">Pays</h1></div>
+            <div class="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-4 sm:gap-6">
+                <div onclick="selectCountry('France')" class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all dark:bg-surface-dark border border-transparent hover:border-primary/30">
+                    <div class="w-full aspect-video bg-cover rounded-lg bg-gray-200" style="background-image: url('https://flagcdn.com/w640/fr.png')"></div>
+                    <div><p class="font-bold">France</p><p class="text-sm text-text-muted-light">2 Ligues</p></div>
+                </div>
+                <div onclick="selectCountry('Angleterre')" class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all dark:bg-surface-dark border border-transparent hover:border-primary/30">
+                    <div class="w-full aspect-video bg-cover rounded-lg bg-gray-200" style="background-image: url('https://flagcdn.com/w640/gb-eng.png')"></div>
+                    <div><p class="font-bold">Angleterre</p><p class="text-sm text-text-muted-light">4 Ligues</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-league" class="view-section container mx-auto px-4 py-8 max-w-4xl">
+            <div class="flex items-center gap-4 mb-8">
+                <button onclick="navigateTo('view-country')" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-surface-dark transition-colors">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+                <div>
+                    <h1 class="text-2xl font-bold">Ligues</h1>
+                    <p class="text-sm text-text-muted-light">Football - <span id="selected-country-name">France</span></p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div onclick="selectLeague('Ligue 1', '301')" class="flex items-center gap-4 rounded-xl p-4 border border-text-muted-light/20 bg-surface-light dark:bg-surface-dark cursor-pointer hover:border-primary hover:shadow-md transition-all">
+                    <div class="bg-gray-100 dark:bg-gray-800 p-2 rounded-lg size-14 flex items-center justify-center font-bold text-xl text-primary">L1</div>
+                    <div class="flex-1"><p class="font-bold text-lg">Ligue 1</p><p class="text-xs text-text-muted-light">Première division</p></div>
+                    <span class="material-symbols-outlined text-text-muted-light">chevron_right</span>
+                </div>
+                <div onclick="selectLeague('Ligue 2', '302')" class="flex items-center gap-4 rounded-xl p-4 border border-text-muted-light/20 bg-surface-light dark:bg-surface-dark cursor-pointer hover:border-primary hover:shadow-md transition-all">
+                    <div class="bg-gray-100 dark:bg-gray-800 p-2 rounded-lg size-14 flex items-center justify-center font-bold text-xl text-text-muted-light">L2</div>
+                    <div class="flex-1"><p class="font-bold text-lg">Ligue 2</p><p class="text-xs text-text-muted-light">Deuxième division</p></div>
+                    <span class="material-symbols-outlined text-text-muted-light">chevron_right</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-stats" class="view-section w-full pb-20">
+            <div class="sticky top-0 z-20 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md border-b border-text-muted-light/10 px-4 py-3 flex items-center justify-between shadow-sm">
+                <button onclick="navigateTo('view-league')" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+                <div class="text-center">
+                    <h1 class="font-bold text-lg leading-none" id="stats-league-title">Ligue</h1>
+                    <p class="text-xs text-text-muted-light">Saison 2024-2025</p>
+                </div>
+                <div class="w-10"></div>
+            </div>
+
+            <div class="max-w-3xl mx-auto p-4 space-y-6">
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="flex flex-col items-center justify-center gap-1 rounded-xl p-3 bg-primary/10 border border-primary/20 text-center">
+                        <span class="material-symbols-outlined text-primary text-2xl">sports_soccer</span>
+                        <p class="text-[10px] uppercase font-bold text-text-muted-light">Total Buts</p>
+                        <p class="text-xl font-bold text-primary" id="stat-total-goals">...</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-1 rounded-xl p-3 bg-secondary/10 border border-secondary/20 text-center">
+                        <span class="material-symbols-outlined text-secondary text-2xl">emoji_events</span>
+                        <p class="text-[10px] uppercase font-bold text-text-muted-light">Top Buteur</p>
+                        <p class="text-sm font-bold text-secondary truncate w-full" id="stat-top-scorer-name">...</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-1 rounded-xl p-3 bg-tertiary/10 border border-tertiary/20 text-center">
+                        <span class="material-symbols-outlined text-tertiary text-2xl">style</span>
+                        <p class="text-[10px] uppercase font-bold text-text-muted-light">Matchs</p>
+                        <p class="text-xl font-bold text-tertiary" id="stat-matches">...</p>
+                    </div>
+                </div>
+
+                <div class="rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-text-muted-light/10">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-bold text-lg">Classement</h3>
+                        <div id="loader-table" class="loader hidden"></div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm whitespace-nowrap">
+                            <thead>
+                                <tr class="border-b border-text-muted-light/10 text-text-muted-light text-xs uppercase">
+                                    <th class="py-3 pr-4 w-10 text-center">#</th>
+                                    <th class="py-3 px-2">Équipe</th>
+                                    <th class="py-3 px-2 text-center">J</th>
+                                    <th class="py-3 px-2 text-center">Diff</th>
+                                    <th class="py-3 pl-4 text-right">Pts</th>
+                                </tr>
+                            </thead>
+                            <tbody id="standings-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // --- CONFIGURATION API ---
+        const API_KEY = "EScvoEnhz3EljQ00hynWkJCrFboh3V5PmQTkxSqL"; 
+        // URL Hypothétique basée sur votre demande. 
+        // Si cette URL n'existe pas, le mode Simulation s'activera.
+        const API_BASE_URL = "https://sportdb.dev/api/v1"; 
+
+        const state = { sport: null, country: null, league: null, leagueId: null };
+
+        // --- GESTION VISUELLE ---
+        function setApiStatus(isOnline, errorDetail = "") {
+            const alertBanner = document.getElementById('api-alert-banner');
+            const successBanner = document.getElementById('api-success-banner');
+            const errorText = document.getElementById('api-error-detail');
+
+            if(isOnline) {
+                alertBanner.style.display = 'none';
+                successBanner.style.display = 'block';
+                // Cache le succès après 3s pour ne pas gêner
+                setTimeout(() => { successBanner.style.display = 'none'; }, 3000);
+            } else {
+                successBanner.style.display = 'none';
+                alertBanner.style.display = 'block';
+                errorText.innerText = `Raison: ${errorDetail}`;
+                console.warn("Passage en mode simulation. Erreur:", errorDetail);
+            }
+        }
+
+        function navigateTo(viewId) {
+            document.querySelectorAll('.view-section').forEach(el => {
+                el.classList.remove('active');
+                setTimeout(() => { if(!el.classList.contains('active')) el.style.display = 'none'; }, 300);
+            });
+            const target = document.getElementById(viewId);
+            target.style.display = 'block';
+            setTimeout(() => target.classList.add('active'), 10);
+            
+            const mainHeader = document.getElementById('main-header');
+            if(viewId === 'view-stats') mainHeader.style.display = 'none';
+            else {
+                mainHeader.style.display = 'block';
+                // Reset bannières quand on quitte les stats
+                document.getElementById('api-alert-banner').style.display = 'none';
+                document.getElementById('api-success-banner').style.display = 'none';
+            }
+            window.scrollTo(0,0);
+        }
+
+        function selectSport(sport) { state.sport = sport; navigateTo('view-country'); }
+        function selectCountry(country) { 
+            state.country = country; 
+            document.getElementById('selected-country-name').textContent = country; 
+            navigateTo('view-league'); 
+        }
+        function selectLeague(league, id) {
+            state.league = league;
+            state.leagueId = id;
+            document.getElementById('stats-league-title').textContent = league;
+            navigateTo('view-stats');
+            fetchData(league);
+        }
+
+        // --- CŒUR DE L'INTÉGRATION API ---
+        async function fetchData(league) {
+            const tableBody = document.getElementById('standings-body');
+            const loader = document.getElementById('loader-table');
+            
+            tableBody.innerHTML = '';
+            loader.classList.remove('hidden');
+
+            // Valeurs par défaut pour reset
+            document.getElementById('stat-total-goals').innerText = "-";
+            document.getElementById('stat-top-scorer-name').innerText = "-";
+            document.getElementById('stat-matches').innerText = "-";
+
+            try {
+                // Construction de l'appel API
+                // On passe le token en Header ET en query param pour maximiser la compatibilité
+                const url = `${API_BASE_URL}/leagues/${state.leagueId}/standings?api_token=${API_KEY}`;
+                
+                console.log(`Tentative de connexion à: ${url}`);
+                
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${API_KEY}`,
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Erreur HTTP ${response.status} (${response.statusText})`);
+                }
+
+                const json = await response.json();
+                
+                // Si succès
+                setApiStatus(true);
+                // NOTE: Il faudrait mapper ici les données JSON réelles de l'API vers renderData()
+                // Comme on ne connait pas la structure exacte de sportdb.dev, on envoie le json au render
+                // renderData(json); 
+                
+                // Pour l'instant, on simule que l'API renvoie des données Mock structurées
+                // Dans un cas réel, il faut adapter json.data vers notre structure
+                throw new Error("Structure API inconnue (Simulation pour démo)");
+
+            } catch (error) {
+                // C'est ICI qu'on gère le fallback
+                let message = error.message;
+                if (message === "Failed to fetch") message = "Échec connexion (CORS ou URL invalide)";
+                
+                setApiStatus(false, message);
+                
+                // Chargement des données de simulation
+                const mockData = getMockData(league);
+                renderData(mockData);
+            } finally {
+                loader.classList.add('hidden');
+            }
+        }
+
+        function renderData(data) {
+            // KPIs
+            document.getElementById('stat-total-goals').innerText = data.stats.goals;
+            document.getElementById('stat-top-scorer-name').innerText = data.scorers[0].name;
+            document.getElementById('stat-matches').innerText = "34";
+
+            // Tableau
+            const tableBody = document.getElementById('standings-body');
+            data.standings.forEach((team, index) => {
+                let logoHtml = team.logo 
+                    ? `<img src="${team.logo}" class="w-full h-full object-contain p-0.5">` 
+                    : `<span class="text-xs font-bold text-gray-500">${team.name.substring(0,2).toUpperCase()}</span>`;
+
+                const row = `
+                    <tr class="border-b border-text-muted-light/10 last:border-0 hover:bg-gray-50 dark:hover:bg-white/5">
+                        <td class="py-3 pr-4 text-center font-bold text-text-muted-light">${index + 1}</td>
+                        <td class="py-3 px-2">
+                            <div class="flex items-center gap-3">
+                                <div class="size-8 min-w-[2rem] rounded-full bg-surface-light border border-gray-200 dark:bg-white/10 dark:border-gray-700 flex items-center justify-center overflow-hidden">
+                                    ${logoHtml}
+                                </div>
+                                <span class="font-medium text-sm truncate max-w-[120px] sm:max-w-none">${team.name}</span>
+                            </div>
+                        </td>
+                        <td class="py-3 px-2 text-center text-text-muted-light">${team.played}</td>
+                        <td class="py-3 px-2 text-center text-text-muted-light font-mono">${team.diff > 0 ? '+' : ''}${team.diff}</td>
+                        <td class="py-3 pl-4 text-right font-bold text-primary text-base">${team.points}</td>
+                    </tr>
+                `;
+                tableBody.insertAdjacentHTML('beforeend', row);
+            });
+        }
+
+        // --- SIMULATION (FALLBACK) ---
+        function getMockData(league) {
+            if(league === 'Ligue 1') {
+                return {
+                    stats: { goals: 856 },
+                    standings: [
+                        { name: "Paris SG", played: 34, diff: 48, points: 76, logo: "https://upload.wikimedia.org/wikipedia/fr/8/86/Paris_Saint-Germain_Logo.svg" },
+                        { name: "AS Monaco", played: 34, diff: 26, points: 67, logo: "https://upload.wikimedia.org/wikipedia/fr/b/ba/AS_Monaco_FC.svg" },
+                        { name: "Stade Brestois", played: 34, diff: 19, points: 61, logo: "https://upload.wikimedia.org/wikipedia/fr/1/13/Logo_Stade_Brestois_29_2010.svg" },
+                        { name: "Lille OSC", played: 34, diff: 18, points: 59, logo: "https://upload.wikimedia.org/wikipedia/fr/6/62/Logo_LOSC_Lille_2018.svg" },
+                        { name: "OGC Nice", played: 34, diff: 11, points: 55, logo: "https://upload.wikimedia.org/wikipedia/fr/b/b1/Logo_OGC_Nice_2013.svg" }
+                    ],
+                    scorers: [{ name: "K. Mbappé", team: "Paris SG", goals: 27 }]
+                };
+            } else {
+                return {
+                    stats: { goals: 642 },
+                    standings: [
+                        { name: "AJ Auxerre", played: 38, diff: 32, points: 74, logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/f/f7/Logo_AJ_Auxerre_2024.svg/100px-Logo_AJ_Auxerre_2024.svg.png" },
+                        { name: "Angers SCO", played: 38, diff: 14, points: 68, logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d3/Logo_Angers_SCO_-_2021.svg/100px-Logo_Angers_SCO_-_2021.svg.png" },
+                        { name: "AS St-Etienne", played: 38, diff: 17, points: 65, logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/1/1b/Logo_AS_Saint-%C3%89tienne_-_2022.svg/100px-Logo_AS_Saint-%C3%89tienne_-_2022.svg.png" }
+                    ],
+                    scorers: [{ name: "A. Mendy", team: "Caen", goals: 22 }]
+                };
+            }
+        }
+    </script>
+</body>
+</html>
