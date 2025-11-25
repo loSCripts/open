@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StatsApp - Choisissez votre sport</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#D0BB95", "background-light": "#f7f7f6", "background-dark": "#1d1a15", "surface-light": "#ffffff", "surface-dark": "#182c1e", "text-light": "#111813", "text-dark": "#e8f5e9", "text-muted-light": "#608a6e", "text-muted-dark": "#a5d6a7", "border-light": "#e0e7e2", "border-dark": "#385440"}, fontFamily: {display: "Lexend"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[1200px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light dark:border-border-dark px-4 sm:px-6 lg:px-10 py-3 bg-surface-light dark:bg-surface-dark rounded-xl">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-text-light dark:text-text-dark">
+<h2 class="text-text-light dark:text-text-dark text-xl font-bold leading-tight tracking-[-0.015em]">Open sport</h2>
+</div>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4 sm:gap-8">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-muted-light dark:text-text-muted-dark flex border-none bg-background-light dark:bg-background-dark items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border-none bg-background-light dark:bg-background-dark focus:border-none h-full placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Rechercher un sport..." value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark gap-2 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">notifications</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark gap-2 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">settings</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBM_Vr139aTOUWvSlV8bQdXMjqICFtYPGvgYIbGkCFW9CognTY4LhojtDai4uM4O3RdCtiGQaPT7EGkpXJfghmot870eZorH3ec9VSzxDM-VFNFTmVoxvsxnajki4FjEakJQKzkjSQp1l0VJRHExIvtcg8ux3My1a93_LlPPjd-8PNY3hGyqrxJNM11M7r-1hgr13-FvTI7LUNiwLqBP4CPWy4bKe9khbk2CbNsFYrVABy9Q0UY4H3kS7eOcEHf0OwBApfGd0pmVn3O");'></div>
+</div>
+</header>
+<main class="mt-8">
+<div class="flex flex-wrap justify-between gap-4 p-4">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-text-light dark:text-text-dark text-4xl font-black leading-tight tracking-[-0.033em]">Choisissez votre sport</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal">Sélectionnez un sport pour consulter les statistiques détaillées.</p>
+</div>
+</div>
+<div class="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="A football on a green grass pitch" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjFVLqcWg_GjDDm4Rret82UmhG9lzqOkPLyFhvIrKYrJ3rClAZ8j7WfLXJXU8kWRsQgBpHsTy6Q4jWd-dMF1gtrR7qdB6hL9pvK0g2CIHX83-DZ9wgnJtfMB67MwfW1kvSguYYObL63nYlql6QgXNfIV5JWl4awfCRyXyfLeOjwfKw58I6zzMc_CFG5rl8AhMso0nMrTQzEmr_OmgcoxrhDbPIP2yLNETb_9eVKXZjc4wp2_zyhYIU9CB2oz3-jDbqZNxAH4fTjRMz");'></div>
+<div>
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Football</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal">Ligue 1, Premier League...</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="A basketball going through a hoop" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTJJMrQ_lAdQcqA6yAxVE2JJTXCpulHpAY7oMXL6n18Ad0ePTRnigfSudr0Za0TdpnosPCIaxafJzBta5JHiXuvrJ5IcvgCgtZ34UHuKZFfqEmr3JwN1eEosiCF_K4VfTNwEzWf8j1iELUoTGfGIpab38UFkFeDQmTsBOMClbftEfU1SITxcGr-zEOjdSlPYdASL7KtPLJHTFjTfY5XL4zCPVQlz389fhy6C74Wjmlz4Uwdvu3yQklMSSRaCb60hv8GgfBgR6mf0As");'></div>
+<div>
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Basketball</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal">NBA, EuroLeague...</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="A tennis ball hitting the line on a clay court" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7KPkcmekwmHIIUIAxb1da92ij0zDWL8HmWMQ3fqcgeW8M-78K1KPlQDVgXqIFki0Z8Yi-Mae9BQ-oIA52JT2iuOUxk014ofUjuOzyU4Ta3CWLcH1oQX1QJwF-pLgOQ4mAHWCiJGz_fnMsX-wV38G_Rqp17gTDC6Qjrw2u0hhQgAGZIimZQqyrWl5aUfHUT0xMjKQvVsq5Qq6-Y0-kIhx0qDBuzbOoCRNAdked4q3ggsGwKLq_f6nBLaVw9FXEe5nBScSafzbuZAJl");'></div>
+<div>
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Tennis</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal">ATP, WTA...</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="Rugby players in a scrum" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDbn2MS1lciyMss3s2NfROvY8Uf3XK0flZHU8JS4bQszLz11rW7B_yoVYKjvspbZ-H7mVhmfLJev1p0amABFIhbg6q-yZDzyj2teOHFejX5YrjzfBVUu4a5wN4ejPYn7Mv5iPsP9LxKWGonw6x_lU_YKmX2olwEnm23gcIsMMJru0UyOZqZuvAnQASD36K7xdxTfUNH5odJJir9CZe66FDYtksGPm6zf9lJgrRm-PljavCZIGS6lB8kq5FrPmlWACjacWzzD0kZlYE2");'></div>
+<div>
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Rugby</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal">Top 14, Six Nations...</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="A Formula 1 car speeding on a race track" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDARC0Q38pVz1DnBDEVH7SgNUyPwlzvFVKRb-xhMjWVn6-jyTAp5jGWipa_Rk3C0yVTmFn8ZW4FgGNsXy7Fkv7ozFkEwvyFVcsMe8rQk2a6Yyhkqr2tdvBiPcKMqpTr7JHDAa0rQzPJw80xWeMYGzFZRwKk6MXA-HcYp1grj9Bnxd4cekaiJJAunnZcy5CbkZ8GEiURfYnTMmJwfsrDAf0rRPUtpHKBAVtz9vYE72Ipw2LtbaXWIPYtKN2gXRKh0FZleJp3PRXNNJUF");'></div>
+<div>
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Formule 1</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal">Grands Prix, Pilotes...</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="A handball player jumping to shoot at the goal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQZy024_JWhe87mc1AFAyohaJeI1RNhKmnRyFw_1Gb48VDwVH6ren5fB95QWtk8ywxNb_POtkLAJpFSmX-swjMYfKNbE1AGMWProy_K2fGZiBUiRE1US8TD09dZVspd2FuEAqOWJmTNh6BRRh3bNMSP4Ucu5TStzhzwTt7WuRUqSgqK2EFGZEBBDk3ufl0N4UFVSq4c82Jh0x34Q6UB7oMSf737W4rLRRyFk_X-maKOzHjiRAPNObeiqMrbjK48HA5545es7-y_Fom");'></div>
+<div>
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Handball</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal">LNH, EHF Champions...</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="Cyclists racing on a road during a competition" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVmrY1n14XBU9p8MTFT73nTBSrcv6ra7HLFe4plqLYwSAuux76dLaZf462klkxDZCN-vwoFUzMpOtjlhpgaY7g28JQXEVLfEdCjLIDNIdbHKtRkQKzBlHuwy64lMUXX6b3xhp_-r2E1Lk-Nl1BnF7qdPKnYuDG_SIqiiNoLG2ly0Ch4Px1wZowjoviOGdmqJhC5J6LQ5tY3gh88WbnuE5-OR5jIb8PVsl1dF7gouzScMfytiCUYcyoT9fNUFaja1HDBEraERNfg5h4");'></div>
+<div>
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Cyclisme</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal">Tour de France, Giro...</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="A boxer with red gloves in a fighting stance" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaS7ch2axt1uaKfd53soN2H9Qiz3EVLavdjMBRyhZK7rgBfFbGKQasK2g8srx64k8HpgLyd71xRzkGTm5IxNiSwEpi_j9wFn7qZIOwW5ArgZTUOpqtm2uPgJ7ya4fWbCDs4gn9M5qwgMj-VxU6vb6fYa-BbKA6D02y3UP3g5Cm60I_ov1ruv_3tupF3mvwgB5m5sIcEuNJkNmvq9KT8aJlydgjanQ_jQcEurXlcRzLDKv-l6uZHUiIsSy2TLTYToDPPIn5KPqcUQ9i");'></div>
+<div>
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Boxe</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal">WBA, WBC, UFC...</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

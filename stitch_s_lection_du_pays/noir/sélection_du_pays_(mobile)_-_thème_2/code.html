@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Open Sport - Choisissez une ligue</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#00E599",
+            "background-light": "#F2F2F7",
+            "background-dark": "#000000",
+            "card-light": "#FFFFFF",
+            "card-dark": "#1C1C1E",
+            "text-light": "#000000",
+            "text-dark": "#FFFFFF",
+            "text-muted-light": "#6b7280",
+            "text-muted-dark": "#8E8E93"
+          },
+          fontFamily: {
+            display: ["Anton", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+            'lg': '1.5rem',
+            'xl': '2rem',
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .material-symbols-outlined.fill {
+        font-variation-settings: 'FILL' 1;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans antialiased">
+<div class="flex flex-col h-screen max-w-md mx-auto">
+<header class="p-6 flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<h1 class="font-display text-2xl uppercase tracking-wider text-text-light dark:text-text-dark">OPEN</h1>
+<span class="bg-primary text-background-dark font-display text-sm px-2 py-0.5 rounded">SPORT</span>
+</div>
+<button class="text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">
+          dark_mode
+        </span>
+</button>
+</header>
+<main class="flex-grow flex flex-col p-6 pt-0">
+<div class="mb-6">
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Étape 3/3</p>
+<h2 class="text-4xl font-bold font-display text-text-light dark:text-text-dark uppercase tracking-wide">Choix de la ligue</h2>
+</div>
+<div class="relative mb-6">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-text-muted-light dark:text-text-muted-dark">search</span>
+<input class="w-full bg-card-light dark:bg-card-dark border-none rounded-DEFAULT pl-12 pr-4 py-3 text-text-light dark:text-text-dark placeholder-text-muted-light dark:placeholder-text-muted-dark focus:ring-2 focus:ring-primary" placeholder="Rechercher une ligue..." type="text"/>
+</div>
+<div class="flex-grow overflow-y-auto pr-2 -mr-2 space-y-3">
+<div class="flex items-center bg-card-light dark:bg-card-dark rounded-lg p-3 space-x-4 cursor-pointer transition-transform transform hover:scale-[1.02]">
+<img alt="Logo Ligue 1" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWs3NxG-Ov1JbTyjSOeyXZi74cpgZh87xKnro3MHlpDzTKA3cSGjhpR3-SsBYR87UqdRpdwz4zP6ZTDjt2_OGZ6cbujseBBbCf96fKy-lx9XaGHo_pGBn39_amY7SwUbSbn-3hGah-fBlm5efAtoikSvOxJODJPzR_KS8FSYbjXGtPzTWw4Gj6KARabTFCEeIHE8o9ZO1rp15TYf2F8IvSeLL-hkFL_5F7SPzXg9-KPR-zNBbocfQD10svQV-YHN75-74fy8IAwFtp"/>
+<span class="font-semibold text-text-light dark:text-text-dark flex-grow">Ligue 1</span>
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">chevron_right</span>
+</div>
+<div class="flex items-center bg-card-light dark:bg-card-dark rounded-lg p-3 space-x-4 cursor-pointer transition-transform transform hover:scale-[1.02]">
+<img alt="Logo Premier League" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmsc_Rnb3lvZSHS7OOiVRt5hG8E5svIQHVStwLaLzvBDuR5TWfwgClBw9heFw9-SsHtzyIFsSkoUCDqFhvGc28yAHmhfJZOZ75H7Aw73HD93m7vB3qV9E9azFby4vJeC18SbVh-IGGlrXyM6Vjbp7Rx4lqmwED-byE-lcgyum4Ew8SKVZ3iKl1fgxtVI1DEBeI45rhstAVgmtQZY7sXtgTI9Ng5BCyfGetLbHeazwf_GSXwnb9KEjeiRge_yd0slxF8CHBcXHNYE2V"/>
+<span class="font-semibold text-text-light dark:text-text-dark flex-grow">Premier League</span>
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">chevron_right</span>
+</div>
+<div class="flex items-center bg-card-light dark:bg-card-dark rounded-lg p-3 space-x-4 cursor-pointer transition-transform transform hover:scale-[1.02]">
+<img alt="Logo La Liga" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLrxhTRq9ooxbf8DPyMDxqO43Dr62Ztrvj2KcHVxLoPrdKM47pMkgLga4tyx-hxJIzqGg6x2krynkejAqRzLJfdZQR698ePyurDGDCRpVhtJSkFEZ0T16qnhs1OqabLhv7h_yNM5f0CHHhPh6--mWmXKWWiKaTyC7dlgHe43tkolYFIuwEuy04i3qv0FJBiUzSmw-YK8f3ZG-GSccqy8kPEUijcMEqx4hJEqtQFQLJvJqeBs95BKk0TAcLUvYC41rbUJYj_I0meT76"/>
+<span class="font-semibold text-text-light dark:text-text-dark flex-grow">La Liga</span>
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">chevron_right</span>
+</div>
+<div class="flex items-center bg-card-light dark:bg-card-dark rounded-lg p-3 space-x-4 cursor-pointer transition-transform transform hover:scale-[1.02]">
+<img alt="Logo Bundesliga" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAKGOVcCDeOxkcp_qQ_L3z8T30T35TmsxRuCju-pA-w_5Q6iKbDHchbpukKu_eGlZIuStmXBGf1X5wmJi3TZ5ts1kU27LB-UKW_2cXLfqvZmQKcRxkzrHiBMQzbdqbTRMjKhzFXI3TZpJk2J3KC_mSb9iW6CYxbl1bpxnAGhuom7yLqk2-e15lp_Vbl6oQLv7xExf5QZUQHZr4za3W2Fa1r2EgvehAINlhiLS-59bALGUHQCqLiUJS92rJ9dJITg0DdiAGWWjSEJ5F"/>
+<span class="font-semibold text-text-light dark:text-text-dark flex-grow">Bundesliga</span>
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">chevron_right</span>
+</div>
+<div class="flex items-center bg-card-light dark:bg-card-dark rounded-lg p-3 space-x-4 cursor-pointer transition-transform transform hover:scale-[1.02]">
+<img alt="Logo Serie A" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB02vIMHfq9OBcbbxZJtx8bAThxR2x6r-XaY6F4ATXu-PaspG5WoOjvf36x5AZhrG-Zxw6ZC6MsZQsF8ohhGk_Bm90WbymA9VeyyJMAzcm6wHdy98kafjmuH66ElwkazhHkaiBLBRt7GfUk8n7E6teVp-UsCGOx95k293PoDKBT3Bgi8uYDFTb3BRKH1c8bf68qGj0W-xXekpobri4RQ0gxxX_Zyh3LEHpG1UcSvxrgL1hvPTU3S7FoGPYq0zP1tXE6B_zPqesBO1y1"/>
+<span class="font-semibold text-text-light dark:text-text-dark flex-grow">Serie A</span>
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">chevron_right</span>
+</div>
+<div class="flex items-center bg-card-light dark:bg-card-dark rounded-lg p-3 space-x-4 cursor-pointer transition-transform transform hover:scale-[1.02]">
+<img alt="Logo Ligue des Champions" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIj6rTAcjkmqDkw4EC0ioCZJ-Kix24nXcE_A_iU8aoypiI0AaioRm5-Zhrl6wfsN5d05hZqjCU9DFvvAsWvRGpcyep46WXXPycxx9FnpnnrkFFzHjXN9ER_yKHYagXJmPxFrn-cuAj7Q5gRTBg3cyH4oo8tl6TsppTthflyAtxIE92RZ3UlEftdl9F-vuDlWDRirdqakjt5dMk1ykH8UKJX649o-mfg-ep5UHGrqn6qx7rwi4nlTh-vs1e3oQt6DwqxSMT-aem23fK"/>
+<span class="font-semibold text-text-light dark:text-text-dark flex-grow">Ligue des Champions</span>
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">chevron_right</span>
+</div>
+<div class="flex items-center bg-card-light dark:bg-card-dark rounded-lg p-3 space-x-4 cursor-pointer transition-transform transform hover:scale-[1.02]">
+<img alt="Logo Europa League" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9nOv3Jen_c5wRm1VmxvvqtNUn7WZb8qizKWl0xO0919pzQBS0YWIW0ZeoTsVfXyoHR4X8s7wXBpTWFKUv4T9w9wAuq3RKNwJhL5IuIap87LVse32avlvGNn0b0muPVuS3mecJrCIYyNoIWcG9HPbTnxat_oSegzssmAIN1Y4RwS6ZW1nCd1BVseu_qpGaJb0oXQvQJD-7JLsSypjw3eMY7cD6e2bCgkcZEzXJJUCpSlpNbu-BCPIDHZFwD4isWdiKf_oXu972CoKR"/>
+<span class="font-semibold text-text-light dark:text-text-dark flex-grow">Europa League</span>
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">chevron_right</span>
+</div>
+</div>
+</main>
+<footer class="p-4 bg-card-light dark:bg-card-dark rounded-t-xl">
+<nav class="flex justify-around">
+<a class="flex flex-col items-center text-primary space-y-1" href="#">
+<span class="material-symbols-outlined fill">emoji_events</span>
+<span class="text-xs font-medium">Sports</span>
+</a>
+<a class="flex flex-col items-center text-text-muted-light dark:text-text-muted-dark space-y-1" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="text-xs font-medium">Stats</span>
+</a>
+<a class="flex flex-col items-center text-text-muted-light dark:text-text-muted-dark space-y-1" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-xs font-medium">Favoris</span>
+</a>
+<a class="flex flex-col items-center text-text-muted-light dark:text-text-muted-dark space-y-1" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-xs font-medium">Réglages</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

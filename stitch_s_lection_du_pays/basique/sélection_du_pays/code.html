@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SportStats - Choisissez un pays</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df259",
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#102216",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#182c1e",
+                        "text-light": "#111813",
+                        "text-dark": "#e1e6e3",
+                        "text-muted-light": "#608a6e",
+                        "text-muted-dark": "#8fa899",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-50 w-full border-b border-text-muted-light/20 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm">
+<nav class="container mx-auto flex items-center justify-between px-4 py-3">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-bold tracking-tight">Open Sport</h2>
+</div>
+<div class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium hover:text-primary" href="#">Sports</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Ligues</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Joueurs</a>
+<a class="text-sm font-medium hover:text-primary" href="#">À Propos</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJgA5aJEZYkHB1-0B8qvFuRbBtGRNzAYNA1EOORj-PGMUBJZBBJB4uabNvjSVasM00DUyDj3twfrhE7NJPBndLYM_RY0dBSy9k-dCXT0s5SBvwDUwT7pUe8DRZiHHSN_xAjpLyQxhXrtSK59IhXKX2SVkHVPEtA022G7mRzvrIxxt05JI0aSTFPdKoWYCIxbdCYiW1vF1klyA7oDMs7ozC-0ltM4bqPPl6evpv3TCV8XzkqP2VXpbezC8q4vXhXRMX3hlU2CwqWdMz");'></div>
+</div>
+</nav>
+</header>
+<main class="container mx-auto flex-1 px-4 py-8 sm:py-12">
+<div class="mx-auto max-w-5xl">
+<div class="flex flex-wrap items-center gap-2 px-4 mb-6">
+<a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary" href="#">Accueil</a>
+<span class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark">/</span>
+<a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary" href="#">Football</a>
+<span class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark">/</span>
+<span class="text-sm font-medium text-text-light dark:text-text-dark">Pays</span>
+</div>
+<div class="mb-8 px-4">
+<h1 class="text-4xl font-black tracking-tighter sm:text-5xl">Football: Choisissez un pays</h1>
+<p class="mt-2 text-lg text-text-muted-light dark:text-text-muted-dark">Sélectionnez un pays pour voir les ligues et les statistiques disponibles.</p>
+</div>
+<div class="px-4 mb-10">
+<div class="relative">
+<span class="material-symbols-outlined pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-text-muted-light dark:text-text-muted-dark">search</span>
+<input class="w-full rounded-xl border border-text-muted-light/20 bg-surface-light dark:bg-surface-dark py-3 pl-12 pr-4 text-base placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="Rechercher un pays..." type="search"/>
+</div>
+</div>
+<div class="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-4 sm:gap-6 px-4">
+<div class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-surface-dark dark:shadow-black/20 dark:hover:shadow-black/40">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Flag of Argentina" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuOAw05XMD2eo3KA-s0AKZPbJFvlUq5Lu7xaDcxYcFj5NKHFoLwYQHveAky4e-DkfaVRXJoafQJaoLNobLPAWCNigv5qfGXu5QPPe49svbuyCISrU4qzFLzy33eapeiPNzEgQIJZLRLHwPgUuRIw1bSmP73xRsKGNAHrx0iCb6aA6Qo5F1z9uLGXXcuxHyjiaff9uNKkLnVx0o7-w2UTveJ8Eghdgq-mLAs8uCo1u9ku_Qp-JElx91cXS7BE8kn7dg0kW_hCVlfhm8");'></div>
+<div>
+<p class="font-bold">Argentine</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">2 Ligues</p>
+</div>
+</div>
+<div class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-surface-dark dark:shadow-black/20 dark:hover:shadow-black/40">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Flag of Brazil" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBK5MnK2Iga3Iqu-ypgn7QgyL4YS8Fmmfj0eYawk1qPhrwruFywbV1o5dfZfpAdsCfR-K5PGpQfa7GzSuZCJHp-FLo32-C-qcWsefTj88MUELQtHxT_X6VAUTQR_N9hoVw7IgHdTXKHLWQIdG8CCwZxLhNH1TgXoSjGr8F31CF2wz_Zsad7SyIOhY3gAR9hmI3m60jP4cjrb5fga3It4Prvhrg9p9hd_lKpQCIZNXPLt1zAyLGHviv09AEZxA2AmG_prc_eb69UiUGM");'></div>
+<div>
+<p class="font-bold">Brésil</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">3 Ligues</p>
+</div>
+</div>
+<div class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-surface-dark dark:shadow-black/20 dark:hover:shadow-black/40">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Flag of England" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6TGT8THtw1mTHhuQkIX2pjH3-wEinykN3LpI8bnuMU8u24iEILr_zvmX_21dlfpVBTPGvA65MV8g7I9l46cbsAoeLDv5PfiashHIeT36ZMjhlOpzYwIz3hm9QdBr6nLieVrv8KRh3FaKrNw3_Ihph6R2ljGCKlHD9yCX3AY9x-No_O-g9HygDPBL_mkWSLq98C81h0ptTnD7Zvoi0cVuX8JaPyie5djOh0mylHDKCxRTfKHIP3bcxtysXdQ_fBwapblQCbm2x2bNa");'></div>
+<div>
+<p class="font-bold">Angleterre</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">4 Ligues</p>
+</div>
+</div>
+<div class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-surface-dark dark:shadow-black/20 dark:hover:shadow-black/40">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Flag of France" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATqyBoSSdhfvhKBG8jkUBxjOC1POD5t9dUmwKA0q67xsBTJfHb3LoBKCV53l3eT-z2DuNhSev2_sjO2FNPbT1W7Mf3lfUB2jHjq76m3rOhNAX4o_fMEW79vlqYFqV2IC1z8K2ODJkSb-2Q5eMxlDoHDPwIeSpFgPfuRc1CvR05YVf695ksvaH0AfWlbp03UY3GnPN-SYpZdXvIexx19yrfLrMR3RyZx-z4CWMCki_336GwohIQ1O7Rn4tp2EAPc3deShmCG2GD8VeL");'></div>
+<div>
+<p class="font-bold">France</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">2 Ligues</p>
+</div>
+</div>
+<div class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-surface-dark dark:shadow-black/20 dark:hover:shadow-black/40">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Flag of Germany" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5LZW5XFQNIRkPZi-hOgIyuBrS7rWiIP4qAlsoF6Kg6O5IbzoT9HZgxBZZ7s3MkK9a99Z_q_XvMhNwRFwLdf7LG0EMO20_8AXfv8hWThTlSvUFtNoHWGxxrfbBOxdCWYfXazxXFcrLiVq3LIYB3eghdm_jo0fQOs1G3UFhmFFub0nF37ZTXRePS4ioU3o76k3pwImt_Tzk4F8eA21cTaph-8by23cmd5Q3CObp5OO3Jf24tmpNhRI-PmLBje9ctlPhr_i3SQUwU2TV");'></div>
+<div>
+<p class="font-bold">Allemagne</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">3 Ligues</p>
+</div>
+</div>
+<div class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-surface-dark dark:shadow-black/20 dark:hover:shadow-black/40">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Flag of Italy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRpCQFyb_hRh3N5DpoPNFxoPGv5-fsM_L8K9k091z_41p64ZmeWLTEsruTO4ZzhFlYgRALEmz-YVwilloYlHC0g95yDTijiJ4Dmd13cvdJjdW_nNp1lJj4iJo0mBMH5IiAQbflLdg9sUAyvxMRApZ9fz1CRF-_Ix9BmXBvE3U5J6_rIRqQAzX6jLISfsBy8NDBuNSvxHgyRNBWc1BDIS5nW6eihWqiSRH1M9O2fcmvMswpCEeTscU9h3kedVLo1Z1DT-ZThKtblFBh");'></div>
+<div>
+<p class="font-bold">Italie</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">2 Ligues</p>
+</div>
+</div>
+<div class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-surface-dark dark:shadow-black/20 dark:hover:shadow-black/40">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Flag of Japan" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDldy5YF8-Nza5BJL8I8g0JUdNsHQK8UneX33t7_F9WoLSCI0F62do2doNboaSRMBohQc9G9edGhEVe0_qcDx0Ws5IWvhcQl_jtf2304GrssYA7FHkjennxKeWZDDmKP0G0OR98Ae0dXApiM6eZKS0YRR26_WtNfBcp5yqkqE-oHbCf8amgw4sPgcHzUvFmz5ef8-xLujNAtqg-lZ_AkSU6DNcIub59DkU5cPHW_IuxH_kAYoiiFBpj2fjhqzeRqPdEHAhVylJesITM");'></div>
+<div>
+<p class="font-bold">Japon</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">2 Ligues</p>
+</div>
+</div>
+<div class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-surface-dark dark:shadow-black/20 dark:hover:shadow-black/40">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Flag of Mexico" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAyaPKywJPzJBUaou6bbtUQ_fDcVAqDz70aBRShlrDqpcWTnvAMIlovyDabva5pzm7gxTyaoiTGEINxRDf-Uh_E_-uOOVU2GLmLzsAbz1geMiawL8ZvYINHrT4-vHR8a1ByM89UaLf1ckn_KTEFA7uuzf-y53DT2XxIV5eiTxKw1wThkew3cN4-t6fCmo7zKxNKEdRPEveG7EA2Qrbxtn5C8fhspnP4N51FYo0vj6u3g8Q26oTgGOgljAsIf8DDNwzIImrhzHKefdKy");'></div>
+<div>
+<p class="font-bold">Mexique</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">1 Ligue</p>
+</div>
+</div>
+<div class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-surface-dark dark:shadow-black/20 dark:hover:shadow-black/40">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Flag of Netherlands" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwWnVmqLtuAkybwFGUYvHnj6bdc3vL_K4OSoFR0E9i-1gi_j63oYVAWiys9Spe6vOtx3cTF37aCFf_vxeGKFywQJmnws3voDgLGtBrJlW1Ult0RHvDOoK3nEtdp7hfY7U9lBFZ1mbbvtZn0JvrhUCHB0CsS0UnfoL4Z6U_DBie1l7RSp5z3Fi53HXo5IH4vn_sDq254sUA1_M6_yxg_sCnapCD8W9V6uh4Vc9IchgECHuerkgrXvL8veJ-NfQoXwJ-mF6_kwOaeXUo");'></div>
+<div>
+<p class="font-bold">Pays-Bas</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">2 Ligues</p>
+</div>
+</div>
+<div class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-surface-dark dark:shadow-black/20 dark:hover:shadow-black/40">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Flag of Portugal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwGVy5kNf9lfzQ1bORWfacgGZoj9yyh2zTgFQQoCzDgrFt5OwNr2KntKwXDsuJA1lUCoOD_vtCyIx4XYB1YMpnfkCkMA9ENm_qQ8PNb_rzGIGej0BZmTIATeKUlreL2lHjq4RewxMd4tQMNSUtXruRTSjTc7x6kFl5Xr30ygkoEBlwow9dt78UDHYWeOrU5g4o-heSCuGKZpRRriJxpOfskGEvbwN9BZid0-zqqbd24FCVWdiDzDytUfhRXKDUx3WnLnV3ERiDAtf6");'></div>
+<div>
+<p class="font-bold">Portugal</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">2 Ligues</p>
+</div>
+</div>
+<div class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-surface-dark dark:shadow-black/20 dark:hover:shadow-black/40">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Flag of Spain" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3yT8GA_NiLm8ktdSQTbtl45f6QTICO-YSEh5gEx2pz8r4WYRgDBQRVTTGOEwIkUtiJ45bmTEmugTSqP0B0eR5oJJ5aiUKa65zjgoIGDyRKkkri-yZybUOiH9KeP16UvpcSFRVSeqQSlulRdWTqivAtigaGra8DBO2kmOCGHcbg3x8eIPwVTqhwRnxh7Wj4lX7UjnoneOpfuNMp2A_oov_OKiHVtZ8z-GNgj87g3M5u9xYm7RKOoENjeg9JewEffixbsAoyNj5xQHk");'></div>
+<div>
+<p class="font-bold">Espagne</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">2 Ligues</p>
+</div>
+</div>
+<div class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-surface-dark dark:shadow-black/20 dark:hover:shadow-black/40">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Flag of USA" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB4z8mkAdtSsSB9Pca-U-8czmumLvaz0S6uLeOxb1n6ltpTEePLoQGDiMfo4A7NMVgDJD2t_4OzKnNuz7hZprOYZ3WOugIbCt0oqym-yw0bV75HW1uW34tTeRk6zm3Lh2XUl_ZgVRtuCmHrXxG41TjOAKvoSzo3IoX_dMlcDGq5Dx2Sb87MfKDl21jdznZf6ppQD9mbkm7TQSNjCqr6SLVhss_ugy8XFfiqkj3hPYy8ue-hO5xhbyy9lyI-cNwoM6_DzdVVvp87iaJG");'></div>
+<div>
+<p class="font-bold">États-Unis</p>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">1 Ligue</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-12 w-full border-t border-text-muted-light/20 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto max-w-5xl px-4 py-8">
+<div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+<div class="flex items-center gap-2">
+<p class="text-sm font-semibold">Open Sport</p>
+</div>
+<div class="flex flex-wrap justify-center gap-4 text-sm text-text-muted-light dark:text-text-muted-dark">
+<a class="hover:text-primary" href="#">À propos</a>
+<a class="hover:text-primary" href="#">Contact</a>
+<a class="hover:text-primary" href="#">Mentions légales</a>
+</div>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">© 2024 SportStats. Tous droits réservés.</p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="h-full" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Open Sport - Choisissez un sport</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#00BA77",
+            "background-light": "#F7F7F7",
+            "background-dark": "#121212",
+            "card-light": "#FFFFFF",
+            "card-dark": "#1E1E1E",
+            "text-primary-light": "#1C1C1E",
+            "text-primary-dark": "#F2F2F7",
+            "text-secondary-light": "#8A8A8E",
+            "text-secondary-dark": "#8D8D93",
+          },
+          fontFamily: {
+            display: ["Anton", "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem", // 16px
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+</head>
+<body class="h-full bg-background-light dark:bg-background-dark font-body antialiased">
+<div class="flex flex-col h-full max-w-md mx-auto p-6 pt-8">
+<header class="flex justify-center items-center mb-8">
+<h1 class="font-display text-4xl tracking-wide text-primary">
+        OPEN <span class="bg-primary text-background-light dark:text-background-dark px-2">SPORT</span>
+</h1>
+</header>
+<main class="flex-grow">
+<h2 class="text-2xl font-bold text-text-primary-light dark:text-text-primary-dark mb-2">Choisissez un sport</h2>
+<p class="text-text-secondary-light dark:text-text-secondary-dark mb-6">Pour commencer, sélectionnez une discipline.</p>
+<div class="grid grid-cols-2 gap-4">
+<a class="flex flex-col items-center justify-center p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+<span class="material-symbols-outlined text-primary text-5xl">sports_soccer</span>
+<span class="mt-2 font-semibold text-text-primary-light dark:text-text-primary-dark text-center">Football</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+<span class="material-symbols-outlined text-primary text-5xl">sports_basketball</span>
+<span class="mt-2 font-semibold text-text-primary-light dark:text-text-primary-dark text-center">Basketball</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+<span class="material-symbols-outlined text-primary text-5xl">sports_tennis</span>
+<span class="mt-2 font-semibold text-text-primary-light dark:text-text-primary-dark text-center">Tennis</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+<span class="material-symbols-outlined text-primary text-5xl">sports_rugby</span>
+<span class="mt-2 font-semibold text-text-primary-light dark:text-text-primary-dark text-center">Rugby</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+<span class="material-symbols-outlined text-primary text-5xl">sports_esports</span>
+<span class="mt-2 font-semibold text-text-primary-light dark:text-text-primary-dark text-center">E-Sport</span>
+</a>
+<a class="flex flex-col items-center justify-center p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm hover:shadow-md transition-shadow" href="#">
+<span class="material-symbols-outlined text-primary text-5xl">more_horiz</span>
+<span class="mt-2 font-semibold text-text-primary-light dark:text-text-primary-dark text-center">Autres</span>
+</a>
+</div>
+</main>
+<footer class="pt-6 text-center">
+<nav class="flex justify-around items-center bg-card-light dark:bg-card-dark p-3 rounded-full shadow-md">
+<a class="flex flex-col items-center text-primary" href="#">
+<span class="material-symbols-outlined">sports</span>
+<span class="text-xs font-medium">Sports</span>
+</a>
+<a class="flex flex-col items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs font-medium">Recherche</span>
+</a>
+<a class="flex flex-col items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">star</span>
+<span class="text-xs font-medium">Favoris</span>
+</a>
+<a class="flex flex-col items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profil</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

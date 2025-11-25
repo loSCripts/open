@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SportStats - Sélection de la ligue</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0df259",
+            "background-light": "#f5f8f6",
+            "background-dark": "#102216",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111813] dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700/80 px-4 sm:px-6 py-3 bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="text-[#111813] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Ligue</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400">Football - France</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGYEcbjXj3LT8bzj0p_rsS_FUG8xxmHxz0DxnJRSvtv8Mxf90Nx3kdenJNihqmJJSQnN7_W4Xu3dT3xr9Ip0-igfQU2wOq656aIng3eIyoGR2xa6d1EZXdZ-8J9RyCo5Nfuh5NgpYMD94lJLeKi3XB2nO4rgUWhZ2EiIwdtNmWH8Tady2FLvpTzJxnLcp7BgxvyZFt9TPBZ1_G8MEZcZp6tPHAs_9rOKHUfRR20Erd-Mft_1asDOrYzqdL0Jm6UVwStbvA7p8ZBWO8");'></div>
+</div>
+</header>
+<main class="px-4 sm:px-6 flex flex-1 justify-center py-5 lg:py-8">
+<div class="layout-content-container flex flex-col w-full max-w-7xl flex-1 gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+<div class="flex items-center gap-4 rounded-xl p-3 border border-gray-200 dark:border-gray-700/80 bg-white dark:bg-background-dark/50 cursor-pointer hover:border-primary/50 dark:hover:border-primary/50 transition-colors">
+<div class="bg-gray-100 dark:bg-gray-800 p-2 rounded-lg">
+<img alt="Ligue 1 Logo" class="size-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLMR39lPRL7pJPhk6ZAatdP2qnKgbG8BU58EOnT31ILoQl4bgIlYse4bFyDCRKToSa3DkSvYYVcI2tV-j_HaPOoZvd0wXDKOlse4H4NbcLGKqgWObjhAnhgcUlfYgrAajBgg399VWBq6wmhdKK0GVj1tylzqyZ5SI4fCRLEYfVDWlv9G_7sus7kTVwvQduRvdbiaUT5yqPF5ntYMZWCke-vySVjt7iGBtUpGxajFyYt9VSq31CSoBOVBis4ww2-iKUweQjGX6ykyXm"/>
+</div>
+<p class="text-[#111813] dark:text-white font-semibold">Ligue 1</p>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 ml-auto">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 rounded-xl p-3 border border-gray-200 dark:border-gray-700/80 bg-white dark:bg-background-dark/50 cursor-pointer hover:border-primary/50 dark:hover:border-primary/50 transition-colors">
+<div class="bg-gray-100 dark:bg-gray-800 p-2 rounded-lg">
+<img alt="Ligue 2 Logo" class="size-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5saRBRHLAF066M55HQUFmgifSVQfR3sjHFju1C2d0OX6nTTbsZcjzM8yVgHiSZU606qyrEbKXK1zuMZM2ATWC6dR_QwiPj7fF8xeWjPLXq-L613s5msu6LfeJRkBJaO07Z8Dz4nnP3sF6XUMkj1AA5LDa8KQWwJu-lAe0RfJOZK2yfWMb4Q6gI1xCw05OMvoDONTP5MxP2OM5YexbWLdblFwgyLMHWWGMINaH9gsB5eZctv-bPSGZffprMmodpLGKvTFnemIQ-7mY"/>
+</div>
+<p class="text-[#111813] dark:text-white font-semibold">Ligue 2</p>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 ml-auto">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 rounded-xl p-3 border border-gray-200 dark:border-gray-700/80 bg-white dark:bg-background-dark/50 cursor-pointer hover:border-primary/50 dark:hover:border-primary/50 transition-colors">
+<div class="bg-gray-100 dark:bg-gray-800 p-2 rounded-lg">
+<img alt="National 1 Logo" class="size-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiwJoT29msepRWfhYDMDbMdIyKTgGNv8FnWZc5cwJG3necj8vxiLf2msyIAtJRK7VPzOadDyEvcYPIvZ3j2vVgP-KPl6y_ffqJHhtggXWbGJz5dB55NVckGvwESDsq5hTjOcGKldvH_fd3KKhkF30dOXNeB-fzJRlf1Dor6_oc1GJ34ZL394rSbuvw-9Hrp9vg1MfGNkrT-qEEvUavuKozO2C9bEXp_40NBNft9d06pYNfelQ5ACR48FLzTd5of5_g3uoRNnkYxz0f"/>
+</div>
+<p class="text-[#111813] dark:text-white font-semibold">National 1</p>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 ml-auto">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 rounded-xl p-3 border border-gray-200 dark:border-gray-700/80 bg-white dark:bg-background-dark/50 cursor-pointer hover:border-primary/50 dark:hover:border-primary/50 transition-colors">
+<div class="bg-gray-100 dark:bg-gray-800 p-2 rounded-lg">
+<img alt="Coupe de France Logo" class="size-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgw3Bj1GGkXxQg9P4QLPfqMayP-K0-nGr5nodhh_9zEQq2SkQP45sli_9Mb1TCZ9xs4iP9tKYqKXjlsc5DL51riotkRR5VsPUIPCqfHlVaTurmEw5_MYO9o2P9gwqZKY2xkgCGD5v-zo_EAXRdFYO5QxW1aUZ2HWvPoGYR4deUzNLOfHOAdOcTZsq-RKkG5j-8Il0APPMfg7E3oEOAcVNl0k3fgjCAX7gFlc2GmkJDTYI-ZjlCeIbk31gCv3794Y5KRf3Nhy-W4KP8"/>
+</div>
+<p class="text-[#111813] dark:text-white font-semibold">Coupe de France</p>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 ml-auto">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 rounded-xl p-3 border border-gray-200 dark:border-gray-700/80 bg-white dark:bg-background-dark/50 cursor-pointer hover:border-primary/50 dark:hover:border-primary/50 transition-colors">
+<div class="bg-gray-100 dark:bg-gray-800 p-2 rounded-lg">
+<img alt="Trophée des Champions Logo" class="size-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnO2YcO4QHWaYe8PnpimVNEJ1EbZmVhKX-1vQy4Xp9fb9zU5U_uz4RGKlgkP7dfDWxx4ZKtMTrRjaNJu1SMsj_RHisAuTDO0uGurqhw7DKpPrpde4q7it0U4Xh7x7FmjXL92dhfdQ_BOL3gRMmRfXRFwos8aFyLdCIQCNMylP-gEGOKyYpdg3LPhTZovxI3DoGJ_Z-WqNwigxzgyeh3_NCEfHVHP9R42bPSgoQ8HmJPiQT_GjM8uOk4R0CSCoyC3xCAmn8EjAk_3EA"/>
+</div>
+<p class="text-[#111813] dark:text-white font-semibold">Trophée des Champions</p>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 ml-auto">chevron_right</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

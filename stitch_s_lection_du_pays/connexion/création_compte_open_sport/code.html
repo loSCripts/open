@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Open Sport - Connexion</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#D0BB95", "background-light": "#f7f7f6", "background-dark": "#1d1a15"}, fontFamily: {display: "Lexend"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark p-4 group/design-root" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full w-full max-w-md grow flex-col justify-center">
+<div class="flex flex-col items-center">
+<div class="pb-8"></div>
+<h2 class="text-[#111813] dark:text-gray-200 text-2xl font-bold leading-tight tracking-tight text-center pb-2">Bienvenue</h2>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal text-center pb-8">Créez votre compte pour accéder aux stats.</p>
+<div class="w-full">
+<div class="w-full flex-wrap items-end gap-4 px-0 py-2">
+<label class="flex w-full flex-col min-w-40 flex-1">
+<p class="text-[#111813] dark:text-gray-200 text-base font-medium leading-normal pb-2">Email ou nom d'utilisateur</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111813] focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe6df] dark:border-gray-700 bg-white dark:bg-background-dark dark:text-white h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal transition-colors duration-200" placeholder="Entrez votre email ou nom d'utilisateur" value=""/>
+</label>
+</div>
+<div class="w-full flex-wrap items-end gap-4 px-0 py-2">
+<label class="flex w-full flex-col min-w-40 flex-1">
+<p class="text-[#111813] dark:text-gray-200 text-base font-medium leading-normal pb-2">Mot de passe</p>
+<div class="relative flex w-full flex-1 items-stretch">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111813] focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe6df] dark:border-gray-700 bg-white dark:bg-background-dark dark:text-white h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] pr-12 text-base font-normal leading-normal transition-colors duration-200" placeholder="Entrez votre mot de passe" type="password" value=""/>
+<button aria-label="Toggle password visibility" class="text-gray-400 dark:text-gray-500 absolute inset-y-0 right-0 flex items-center justify-center pr-4">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</label>
+</div>
+</div>
+<div class="w-full text-right pt-2 pb-6">
+<a class="text-sm font-medium leading-normal text-primary hover:text-primary/80 transition-colors duration-200" href="#">Mot de passe oublié ?</a>
+</div>
+<div class="w-full pt-2 pb-4">
+<button class="flex h-14 w-full items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-primary px-5 py-3 text-base font-semibold leading-normal text-black shadow-sm transition-transform duration-200 ease-in-out hover:scale-[1.02]">
+                        Créer un compte
+                    </button>
+</div>
+<p class="text-center text-sm font-normal leading-normal text-gray-500 dark:text-gray-400">
+                    Déjà un compte ? <a class="font-bold text-primary hover:text-primary/80 transition-colors duration-200" href="#">Se connecter</a>
+</p>
+<div class="relative flex w-full items-center py-8">
+<div class="h-px flex-grow bg-gray-200 dark:bg-gray-700"></div>
+<span class="mx-4 flex-shrink text-sm font-normal text-gray-400 dark:text-gray-500">OU</span>
+<div class="h-px flex-grow bg-gray-200 dark:bg-gray-700"></div>
+</div>
+<div class="grid w-full grid-cols-2 gap-4">
+<button class="flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-background-dark px-4 py-2.5 text-sm font-semibold text-[#111813] dark:text-white transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-gray-800">
+<img class="h-5 w-5" data-alt="Google logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNvg4007xdT4VXZy23_lsjJB9pMdrLMaK4XIyhzJq5sVURIPIx4EIVTuQ-e1Frl16ZTTqGpjhxJBIplsez4iSTHDnlxeALxaDD_6WH9eUq1AUOvT4e9PZ8wewXlT4QGkwrmuzn4KKvsAp5M1mMpav3JXF6k28MxAUOtxKGY9xk9nGiRnoVYD5Bv-JaPEk1Lez3wM_0Xw3V_gmYKgxEqbBSZqYwQADi6NiDJ4wcf7P33M1UDwn1eE2QbEVZdDTnZc48yXeS1OoX82RS"/>
+<span>Google</span>
+</button>
+<button class="flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-background-dark px-4 py-2.5 text-sm font-semibold text-[#111813] dark:text-white transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-gray-800">
+<img class="h-5 w-5 dark:invert" data-alt="Apple logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0lvjAMzAd5QmP-rN-uwPY7MSi7paV6aG3sjt0p7bk6NdyHHK7UzLLEjZpEmp2qzJW4JoApi9FrO8FglJS2wQP9muhBuLlGkeBuzbL4YRziCPU5zuxoWojiVuE3Nu8kmjQXshQjC5P-Ku_MDrCVvR72wiboyV4je7eDT6JsL3sFLTaXlJduk6xAU-Vt71UTlFW0jDf01QjkPDST1WKoaHiHPQoGvVXmWBLmNnKjFtAgAV3OCyfY8Z1iHuCrrFa0sp9V88t55bTWF8U"/>
+<span>Apple</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

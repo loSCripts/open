@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Open Sport - Choisissez un pays</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#00E599",
+            "background-light": "#F2F2F7",
+            "background-dark": "#000000",
+            "card-light": "#FFFFFF",
+            "card-dark": "#1C1C1E",
+            "text-light": "#000000",
+            "text-dark": "#FFFFFF",
+            "text-muted-light": "#6b7280",
+            "text-muted-dark": "#8E8E93"
+          },
+          fontFamily: {
+            display: ["Anton", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+            'lg': '1.5rem',
+            'xl': '2rem',
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .material-symbols-outlined.fill {
+        font-variation-settings: 'FILL' 1;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans antialiased">
+<div class="flex flex-col h-screen max-w-md mx-auto">
+<header class="p-6 flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<h1 class="font-display text-2xl uppercase tracking-wider text-text-light dark:text-text-dark">OPEN</h1>
+<span class="bg-primary text-background-dark font-display text-sm px-2 py-0.5 rounded">SPORT</span>
+</div>
+<button class="text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">
+          dark_mode
+        </span>
+</button>
+</header>
+<main class="flex-grow flex flex-col p-6 pt-0">
+<div class="mb-6">
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Étape 2/3</p>
+<h2 class="text-4xl font-bold font-display text-text-light dark:text-text-dark uppercase tracking-wide">Choix du pays</h2>
+</div>
+<div class="relative mb-6">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-text-muted-light dark:text-text-muted-dark">search</span>
+<input class="w-full bg-card-light dark:bg-card-dark border-none rounded-DEFAULT pl-12 pr-4 py-3 text-text-light dark:text-text-dark placeholder-text-muted-light dark:placeholder-text-muted-dark focus:ring-2 focus:ring-primary" placeholder="Rechercher un pays..." type="text"/>
+</div>
+<div class="flex-grow overflow-y-auto pr-2 -mr-2">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col items-center justify-center bg-card-light dark:bg-card-dark rounded-lg p-4 space-y-2 cursor-pointer transition-transform transform hover:scale-105">
+<img alt="Drapeau de la France" class="rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvztKKcLzyZ2v4L70H2ZWdjTVNucj1Wc_wJuyw9l-eyhwRpk_uuy0FlAiogiXcdITuXA9TvI5tf4vpjPNrHqGDlwXlE7KsrlxWf93QM2gywXz1clRqKGpgQ1VKqF3QIya36euCXPq8Nt71VgvkUM5wJVtkP4N1HUjcdEp-pxlFCpSxMQ79-7P6yV96T1z15HCAr37Bj2MNkaMswUf45n7wkHL-ex1aSaetuyFvANQWzYSOnnCDDXK974Tk1mf8rwG_oC7xGcldc-pv" srcset="https://flagcdn.com/w320/fr.png 2x" width="80"/>
+<span class="font-semibold text-text-light dark:text-text-dark">France</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-card-light dark:bg-card-dark rounded-lg p-4 space-y-2 cursor-pointer transition-transform transform hover:scale-105">
+<img alt="Drapeau de l'Espagne" class="rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQVf0MKPidb9fhvaknToyqGGbfobwnVzohJbWJsdJ03Vl8ZOB0Dhxt32KK6QkzppJQc5RdH8P2he616s-0NwBK9pkhHs8cwX5ELspT1DSYla8ucruNO-83Sw8yZGSiVNHFIIfAD6K2OdtYcapKAlUkCywrRN097iIGttJr5Mb3fhu1W96oG0SzXeIgUNS0SdEVL6KEIiNZlVagtppzvgHbafmT220SzF4GaPfX31v-MF_MnveJ20neKNVXCRBXOIotFKlH60Dh9Z0P" srcset="https://flagcdn.com/w320/es.png 2x" width="80"/>
+<span class="font-semibold text-text-light dark:text-text-dark">Espagne</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-card-light dark:bg-card-dark rounded-lg p-4 space-y-2 cursor-pointer transition-transform transform hover:scale-105">
+<img alt="Drapeau de l'Angleterre" class="rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU1h8fX_LovbxahGlmtZkG1clug_vrO9ijZYQb4VR5LdlWn7DofwD_-Xd32s9dYXGKWdtCNg-RCz3k0GVOp9EGI2nybza3XeFgMfBqmz_TIuV4bfOPPCx8XJYHApkZpZap5JNpjiTlySj9pEPhFOJFggIEvL1qfXiUCNt5DqEhGNYaXgqsq4K_XMWNLOwWpy6DVPFJC1CO27GFFkgSeelC_eibwhWbxLMqnlsPb23boxAR-ItvKjToAvrGtg-KAGM2PwM52SvplQGj" srcset="https://flagcdn.com/w320/gb-eng.png 2x" width="80"/>
+<span class="font-semibold text-text-light dark:text-text-dark">Angleterre</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-card-light dark:bg-card-dark rounded-lg p-4 space-y-2 cursor-pointer transition-transform transform hover:scale-105">
+<img alt="Drapeau de l'Allemagne" class="rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDIRwm2yBeSDcQKP26Utbi3O-fat8TlbuB9eJUSqXNH8ewHJ6tttcgopAuONgeDr-hqjgmPigk-MKtEDTfS32go36Nq7oK-ASwrcsidV7ih33BQoyEcN4ituR5IkbkE9NaAaJpQseqakVmbMn7_jh6eBN9UP3FuYtD9iRn6REOnya18bWwGYcb4IcIjkGMPXMN3gNsV_w-7ABfIkz4vDdlPa-D2UrGlFfyYANrlBD8SmF3oCb9slqT-MVT37cxd_yRs77g-5x_bw7s" srcset="https://flagcdn.com/w320/de.png 2x" width="80"/>
+<span class="font-semibold text-text-light dark:text-text-dark">Allemagne</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-card-light dark:bg-card-dark rounded-lg p-4 space-y-2 cursor-pointer transition-transform transform hover:scale-105">
+<img alt="Drapeau de l'Italie" class="rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC4NB7VZS7iawsv5NmTLXYIveRo1vxdO53lHkeSa4ru6VuLTN3O3ije33QEycjL9OPCUf9N95vlzTRKqFJRQo6AQ-dOc6yTUo2VuyFfAIa8bYFLJy8tKv0prvEEa7SJut5VUJnorTKHuwWbWcexIzTkgDNDFZsQXoFmGiM1S7o4FV5xkbrGF4UXfko46jMOMMI1X8iwRifPVCOpgeh2ARWPHcXyFip2n_ph4GYImM_mKXCHkJlosPobprlP5Ib7WHsyoaJ-xTrbe4e" srcset="https://flagcdn.com/w320/it.png 2x" width="80"/>
+<span class="font-semibold text-text-light dark:text-text-dark">Italie</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-card-light dark:bg-card-dark rounded-lg p-4 space-y-2 cursor-pointer transition-transform transform hover:scale-105">
+<img alt="Drapeau du Portugal" class="rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnkOK6S_AT3pRkT0P4gsSoBkE6nCB7flDJ783Lf-c7gc5AzCOwEGi-AWmSb8v3sosGjKsTUmSU6NMaTwVYwQOOmdH2r2ZcnZGvne5y_DkkijU4yRKmxRZveEkU-LNSQ45swY5IASSMCkLeRyFJVB0AXNknhajbC-ZOhdzHPRzgqqOPhXLMv4nqaUqKb06ayVjpQ8mJG1MmAoCZeuGOndEWG2n0fpaNQIR2HOiFjsL4cWfHBlLEIvxEebADkijsdy2rRuCXSXP4WSEf" srcset="https://flagcdn.com/w320/pt.png 2x" width="80"/>
+<span class="font-semibold text-text-light dark:text-text-dark">Portugal</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-card-light dark:bg-card-dark rounded-lg p-4 space-y-2 cursor-pointer transition-transform transform hover:scale-105">
+<img alt="Drapeau du Brésil" class="rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN73YQ4-tIlBVDqA_Js9boljY8w1Ipnu8YAf1rrgHfJZVdTcF89gJUCktEs0vB73EeP9B6AgPsMcSp5a4yK-d8kkYlxqLVd4IzfnRPUbb_NFP6m2_Yt8bpc_RRW0ovlGx26dXjbQ5hZli9ULKNKOJKUtQnxTvvTjxIsvCdGKBnsRn79-ynA0RgDpevjT45psgo1Cw725nuGeB-RZxEBhaeDOmixyV-l8IodVdxDGZHEzpI46C41o9D9-GJHKQRSnIXQNHVQZm5dQQp" srcset="https://flagcdn.com/w320/br.png 2x" width="80"/>
+<span class="font-semibold text-text-light dark:text-text-dark">Brésil</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-card-light dark:bg-card-dark rounded-lg p-4 space-y-2 cursor-pointer transition-transform transform hover:scale-105">
+<img alt="Drapeau de l'Argentine" class="rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvJRLIVEC_Gvtu3XRuPFfn3bwhsFPw-XTHWff0Knw6T3xi502Yzz1jB7WkVOvNeb-dIj4qwt2jH_tdvCaJGce2ZZg5I1tIafRb6LrQrgL2790ROBSmiU5DqEAHg84OzunfEgAJmeFYoB1jxgi3QxrXwF4BjSHJQGUqpAkmJTPVzbapfxvk63av9XLPPvx3sqHfLG30naEdlgdVLcTOMrU-zHznFJa0gtTruQrT3681TYc6nI3kT74SYS7BG3aQQazz5WYJ-trSPBKb" srcset="https://flagcdn.com/w320/ar.png 2x" width="80"/>
+<span class="font-semibold text-text-light dark:text-text-dark">Argentine</span>
+</div>
+</div>
+</div>
+</main>
+<footer class="p-4 bg-card-light dark:bg-card-dark rounded-t-xl">
+<nav class="flex justify-around">
+<a class="flex flex-col items-center text-primary space-y-1" href="#">
+<span class="material-symbols-outlined fill">emoji_events</span>
+<span class="text-xs font-medium">Sports</span>
+</a>
+<a class="flex flex-col items-center text-text-muted-light dark:text-text-muted-dark space-y-1" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="text-xs font-medium">Stats</span>
+</a>
+<a class="flex flex-col items-center text-text-muted-light dark:text-text-muted-dark space-y-1" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-xs font-medium">Favoris</span>
+</a>
+<a class="flex flex-col items-center text-text-muted-light dark:text-text-muted-dark space-y-1" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-xs font-medium">Réglages</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="h-full" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Open Sport - Choisissez un pays</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#00BA77",
+            "background-light": "#F7F7F7",
+            "background-dark": "#121212",
+            "card-light": "#FFFFFF",
+            "card-dark": "#1E1E1E",
+            "text-primary-light": "#1C1C1E",
+            "text-primary-dark": "#F2F2F7",
+            "text-secondary-light": "#8A8A8E",
+            "text-secondary-dark": "#8D8D93",
+          },
+          fontFamily: {
+            display: ["Anton", "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem", // 16px
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+</head>
+<body class="h-full bg-background-light dark:bg-background-dark font-body antialiased">
+<div class="flex flex-col h-full max-w-md mx-auto p-6 pt-8">
+<header class="flex justify-between items-center mb-8">
+<button class="text-text-primary-light dark:text-text-primary-dark">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="font-display text-4xl tracking-wide text-primary">
+        OPEN <span class="bg-primary text-background-light dark:text-background-dark px-2">SPORT</span>
+</h1>
+<div class="w-6"></div>
+</header>
+<main class="flex-grow">
+<h2 class="text-2xl font-bold text-text-primary-light dark:text-text-primary-dark mb-2">Choisissez un pays</h2>
+<p class="text-text-secondary-light dark:text-text-secondary-dark mb-6">Sélectionnez le pays de la compétition.</p>
+<div class="relative mb-6">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary-light dark:text-text-secondary-dark">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-card-light dark:bg-card-dark border-none rounded-lg text-text-primary-light dark:text-text-primary-dark placeholder:text-text-secondary-light dark:placeholder:text-text-secondary-dark focus:ring-2 focus:ring-primary" placeholder="Rechercher un pays..." type="text"/>
+</div>
+<div class="space-y-3">
+<a class="flex items-center p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">
+<img alt="Drapeau France" class="w-8 h-6 rounded-sm object-cover mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzZbLvMirWO6DFfVusbpYdAikjqDTfDqd6_0BO0QI7J4Ai-AJlvmmRlNb4UNfbpagADRHaimjcllCIX3zBHTenBFzWkFSNUW8eL4uVMRz1p2H1owsqDeIEBsnY5_qLisypjsRt6XQsWAkJO_pI6JMt8hJcbqzVLs0rvqqTwYaZtG142BxElULjlPDOl5bnLwHIfEiAjYiAg05xMb1U07NnGA7EuDJzMf4nDux6iAbsp8K1JKhojivnElDuJnYkzkrSDLWfO2vau8Nc"/>
+<span class="flex-grow font-semibold text-text-primary-light dark:text-text-primary-dark">France</span>
+<span class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark mr-2">FRA</span>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">chevron_right</span>
+</a>
+<a class="flex items-center p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">
+<img alt="Drapeau Espagne" class="w-8 h-6 rounded-sm object-cover mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDchfQXjLaAmJu_78V-A89_cfWwtNtIEL4gG5HVgDubUARcBdi0X426WSRn2yOu6MdNW-yM3wiXnAaGUu829KuBVyAzHYc1MwrlZNiyrr2H0Wyt90r_FzMm2HJ85XPPa2enJl1zTQln2SiE1cHHZOjQf_nhmDArcIZcF3kv1ZdVGbOjM9vFEEzh0neJxEy6nHYN12i0uuH8G92Bqn288aszDFbEOLxcvIx6Ngm0VO8pSJ3wO7piW44MS0uyNOTS5QJaDXW8C2Relxs_"/>
+<span class="flex-grow font-semibold text-text-primary-light dark:text-text-primary-dark">Espagne</span>
+<span class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark mr-2">ESP</span>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">chevron_right</span>
+</a>
+<a class="flex items-center p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">
+<img alt="Drapeau Angleterre" class="w-8 h-6 rounded-sm object-cover mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvEZN2Az9jczilm1F0tFiWqJQyIaDbiniLe4CrlqtVhEun7LVAo7ubPnlanlpegtfsJtLXoAFac826az52AjuFTb6Jq2m2eTjaiuESo1HnkV0N7cbpwDXIWAkXUa2ef-WoaSPl2rHbcDA9IFS8milsbww-pEpxqvXqofLAgLuj0jBcblkylFWJb4MptE9eeVfZBFcO8ti67jzdhOY6ADBQVGQA2EffhL6nwxR_Y2dkYpRAJUHL5dvgyVh5JB8yb8BtNxPNdPuLG6eK"/>
+<span class="flex-grow font-semibold text-text-primary-light dark:text-text-primary-dark">Angleterre</span>
+<span class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark mr-2">ENG</span>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">chevron_right</span>
+</a>
+<a class="flex items-center p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">
+<img alt="Drapeau Allemagne" class="w-8 h-6 rounded-sm object-cover mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBochO8WMgmjmp64UYG8kO5RtYCyHbj6Mnz3kw8c1f7PEACpO0NyS9AaVSOPgW0TiBGQ2jdpIZrfEt3b3oX54ZXpPwA7rnbFkqCVfRGFtlpnxdbbj2v2tu_wdrX4anm-HcIDhaTcQTQDJ-WX0Y5HHlpG5LlHzXe5zvYSaNzvrEpxeCN5OZnvOjtM3sVvNfQhABlFvY4bE2Xhs2CL0A1RxU6COXuvXHO2KwSAL5wClqn8HbWDHqq7QtY96qt4sl9vps0uGDLtPGVxAP0"/>
+<span class="flex-grow font-semibold text-text-primary-light dark:text-text-primary-dark">Allemagne</span>
+<span class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark mr-2">GER</span>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">chevron_right</span>
+</a>
+<a class="flex items-center p-4 bg-card-light dark:bg-card-dark rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">
+<img alt="Drapeau Italie" class="w-8 h-6 rounded-sm object-cover mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd-ahbHHPA_yRYQ-Sw8lmG9-oD8Hvr8PtiLrwsBCd2LjABpFPdqYRNjFNYUxAU7j_TM1a_vWbSxoXdTLGNcASWLQwgJfvV7_ogNLU2Ahu9uR75m8fiV8Sw7IDdAzFkgXd_MHRncHvFF5NSCX3exmBpng-xCq9SGkEuxIrB0fqA-XlUPhzh61O0VAU3Ag3zgS2XtWpyQlKad6ih6hLYp3l5ZI6nBEm-vshkI0CLh_2T3yrKG3sw-cpGbI5S0GcxQAKpl_8sGx-ngJH2"/>
+<span class="flex-grow font-semibold text-text-primary-light dark:text-text-primary-dark">Italie</span>
+<span class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark mr-2">ITA</span>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">chevron_right</span>
+</a>
+</div>
+</main>
+<footer class="pt-6 text-center">
+<nav class="flex justify-around items-center bg-card-light dark:bg-card-dark p-3 rounded-full shadow-md">
+<a class="flex flex-col items-center text-primary" href="#">
+<span class="material-symbols-outlined">sports</span>
+<span class="text-xs font-medium">Sports</span>
+</a>
+<a class="flex flex-col items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs font-medium">Recherche</span>
+</a>
+<a class="flex flex-col items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">star</span>
+<span class="text-xs font-medium">Favoris</span>
+</a>
+<a class="flex flex-col items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profil</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

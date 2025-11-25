@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Open Sport - Sélection de la Ligue</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#00E06B",
+              "background-light": "#F7F7F7",
+              "background-dark": "#1A1A1A",
+            },
+            fontFamily: {
+              display: ["Teko", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem", // 8px
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans antialiased">
+<div class="max-w-md mx-auto min-h-screen flex flex-col">
+<header class="p-4 bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<div class="flex justify-between items-center">
+<button class="text-zinc-800 dark:text-zinc-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="text-center">
+<h1 class="font-display text-4xl font-bold uppercase tracking-wide text-zinc-900 dark:text-zinc-100">
+                        OPEN<span class="bg-primary text-black px-2 ml-1">SPORT</span>
+</h1>
+</div>
+<button class="text-zinc-800 dark:text-zinc-200">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="mt-4 flex items-center justify-between text-xs text-zinc-500 dark:text-zinc-400 uppercase font-semibold">
+<span>Football</span>
+<span class="material-symbols-outlined text-base">chevron_right</span>
+<span>Espagne</span>
+</div>
+</header>
+<main class="flex-grow p-4">
+<h2 class="font-display text-5xl font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wide">
+                Choisir la ligue
+            </h2>
+<p class="text-zinc-600 dark:text-zinc-400 mb-6">Sélectionnez une compétition pour continuer.</p>
+<div class="relative mb-6">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-zinc-500">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 focus:ring-2 focus:ring-primary focus:border-primary transition duration-200" placeholder="Rechercher une ligue..." type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<a class="group flex flex-col items-center justify-center p-4 bg-white dark:bg-zinc-800/50 rounded-lg aspect-square border border-zinc-200 dark:border-zinc-700/50 hover:border-primary dark:hover:border-primary transition-all duration-300 transform hover:-translate-y-1" href="#">
+<img alt="La Liga logo" class="h-16 w-16 object-contain mb-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcHDWmD9uBhcpw5n9b61EARisge1Fi1uDH55KjMqG68IjIf-Z6gCG8OS2dlEfPbQd6ap2Wvxa_xwZcoHaKNlweY6kes0jKK7eiiOLttmvCbAGta8lvwZpIPRERwLkAXfplr2Pa9T2o30zKs3X-m8j4h0bOKOss4_V5ondywaioH3NBZ1ojbGftrwhoho5yVdFlE2CEztN-CFuBMBK-Dcn_Helvj0Qq_p640QJxEtqBhE_2jmWwEov_WoE2F4QXDf0nfWs3cZtrHBv6"/>
+<span class="font-display text-2xl font-semibold text-zinc-800 dark:text-zinc-200 group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">La Liga</span>
+</a>
+<a class="group flex flex-col items-center justify-center p-4 bg-white dark:bg-zinc-800/50 rounded-lg aspect-square border border-zinc-200 dark:border-zinc-700/50 hover:border-primary dark:hover:border-primary transition-all duration-300 transform hover:-translate-y-1" href="#">
+<img alt="Copa del Rey logo" class="h-16 w-16 object-contain mb-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK615I9jDTT5SSSlV1esENvPsteqZe9MjY5VA19B73bwOMOgIebRv0glcAvqHD8pirCjEe-48fHur_s9i-OttgtpH-vMVtvET8xlXVhfwSbvJeNPkf2BmuO-g0grkuBA6HUpZEZwwodNuMWlKD1Zg7bkRiHvVU34mZXAGcJE30UCMzIFHuPbJAILeTh5_v4gX4CW0gs2RAuz1ih9ccbiGabM-iXZpLtxd2B-e4yKRCFzvM55Fvo8t5qM0UA2WS-DnsX1fhS7hzHYJ1"/>
+<span class="font-display text-2xl font-semibold text-zinc-800 dark:text-zinc-200 group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">Copa Del Rey</span>
+</a>
+<a class="group flex flex-col items-center justify-center p-4 bg-white dark:bg-zinc-800/50 rounded-lg aspect-square border border-zinc-200 dark:border-zinc-700/50 hover:border-primary dark:hover:border-primary transition-all duration-300 transform hover:-translate-y-1" href="#">
+<img alt="La Liga 2 logo" class="h-16 w-16 object-contain mb-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM6G9LZpadi-g1TmE7sQKuZ8KV33ntdQLtoAL3PCVafo2f1H0pMZjsnvGSnrm8G-4kTh7x8xcrllYtT_P5hhQ3t5xTa95fL9mvw0llAM80QwH5QEAjSl3yEz51R_QmE9snhTS65bRhs4mPFR6cS21_vz3EdnJq1qJRGv0WKR6l3EId29sR4m3Z67L0NZ_RyVw_X6CyAqco48eSjv_eu-Hqrp6ymKanCXBh-eufxErKR9n3_Ky6ce5wuJ_gBEjMUm1vJQwb71nrflZg"/>
+<span class="font-display text-2xl font-semibold text-zinc-800 dark:text-zinc-200 group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">La Liga 2</span>
+</a>
+<a class="group flex flex-col items-center justify-center p-4 bg-white dark:bg-zinc-800/50 rounded-lg aspect-square border border-zinc-200 dark:border-zinc-700/50 hover:border-primary dark:hover:border-primary transition-all duration-300 transform hover:-translate-y-1" href="#">
+<img alt="Supercopa de España logo" class="h-16 w-16 object-contain mb-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1OnU6GZV8o48EDuDKZiGvBDN-AW58aCCN4Kxvnvz7RsBhCs6oShM9eqLZ06sY-vm_MJlDzhQwD5Xcgi8Rmkzdy-hhvU7tm6z-FS1DFWSvqjDMSopXhzXgAYZG99Ce9keVXIO4aA3NYOacG9l1X2nQ-qqFkF6S63DyxLv9K9kZGM03G5n8cIVvQeUeHYydPHP9XVCetvOBJRCRflj_56UEd6ZFljFcOq0vhTVYK7cM9o-k7HJfdi6flIM0TiPKSecHUyTBBotKM_i4"/>
+<span class="font-display text-2xl font-semibold text-zinc-800 dark:text-zinc-200 group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">Supercopa</span>
+</a>
+</div>
+</main>
+</div>
+
+</body></html>

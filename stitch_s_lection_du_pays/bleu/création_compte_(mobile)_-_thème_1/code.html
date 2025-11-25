@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Open Sport - Tableau de Bord</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#007BFF",
+                        "primary-light": "#E6F2FF",
+                        "background-light": "#F7F8FA",
+                        "background-dark": "#121212",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1E1E1E",
+                        "text-light": "#1F2937",
+                        "text-dark": "#F9FAFB",
+                        "text-muted-light": "#6B7280",
+                        "text-muted-dark": "#9CA3AF",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#374151",
+                        "success": "#10B981",
+                        "danger": "#EF4444",
+                    },
+                    fontFamily: {
+                        display: ["Bebas Neue", "sans-serif"],
+                        body: ["Poppins", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased">
+<div class="min-h-screen flex flex-col">
+<header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+<div class="max-w-md mx-auto px-4 py-4">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="font-display text-4xl tracking-wider text-slate-800 dark:text-white">OPEN</h1>
+<div class="inline-block bg-primary px-2 py-0.5 rounded-md -mt-2">
+<span class="font-display text-xl tracking-wider text-white">SPORT</span>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-text-muted-light dark:text-text-muted-dark">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="relative text-text-muted-light dark:text-text-muted-dark">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-danger ring-2 ring-background-light dark:ring-background-dark"></span>
+</button>
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700">
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow max-w-md mx-auto w-full px-4 py-6">
+<section class="mb-8">
+<h2 class="text-xl font-bold mb-4">Sélection actuelle</h2>
+<div class="grid grid-cols-3 gap-3">
+<div class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg shadow-sm border border-border-light dark:border-border-dark">
+<span class="material-symbols-outlined text-primary mr-2 text-2xl">sports_soccer</span>
+<div>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">Sport</p>
+<p class="font-semibold text-sm">Football</p>
+</div>
+</div>
+<div class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg shadow-sm border border-border-light dark:border-border-dark">
+<span class="material-symbols-outlined text-primary mr-2 text-2xl">flag</span>
+<div>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">Pays</p>
+<p class="font-semibold text-sm">France</p>
+</div>
+</div>
+<div class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg shadow-sm border border-border-light dark:border-border-dark">
+<span class="material-symbols-outlined text-primary mr-2 text-2xl">emoji_events</span>
+<div>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">Ligue</p>
+<p class="font-semibold text-sm">Ligue 1</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-xl font-bold">Classement</h2>
+<a class="text-sm font-medium text-primary hover:underline" href="#">Voir tout</a>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-lg shadow-sm p-4 border border-border-light dark:border-border-dark">
+<ul class="space-y-4">
+<li class="flex items-center">
+<span class="text-sm font-semibold w-6 text-center">1</span>
+<div class="flex items-center ml-2 flex-grow">
+<p class="font-medium text-sm">Paris SG</p>
+</div>
+<div class="text-xs text-text-muted-light dark:text-text-muted-dark grid grid-cols-3 gap-x-3 w-24 text-center">
+<span>34</span>
+<span>+48</span>
+<span class="font-bold text-text-light dark:text-text-dark">85</span>
+</div>
+</li>
+<li class="flex items-center">
+<span class="text-sm font-semibold w-6 text-center">2</span>
+<div class="flex items-center ml-2 flex-grow">
+<p class="font-medium text-sm">AS Monaco</p>
+</div>
+<div class="text-xs text-text-muted-light dark:text-text-muted-dark grid grid-cols-3 gap-x-3 w-24 text-center">
+<span>34</span>
+<span>+26</span>
+<span class="font-bold text-text-light dark:text-text-dark">67</span>
+</div>
+</li>
+<li class="flex items-center">
+<span class="text-sm font-semibold w-6 text-center">3</span>
+<div class="flex items-center ml-2 flex-grow">
+<p class="font-medium text-sm">Brest</p>
+</div>
+<div class="text-xs text-text-muted-light dark:text-text-muted-dark grid grid-cols-3 gap-x-3 w-24 text-center">
+<span>34</span>
+<span>+19</span>
+<span class="font-bold text-text-light dark:text-text-dark">61</span>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold mb-4">Statistiques Clés</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-card-light dark:bg-card-dark rounded-lg shadow-sm p-4 border border-border-light dark:border-border-dark">
+<h3 class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark">Buts par match</h3>
+<p class="text-3xl font-bold text-primary mt-1">2.59</p>
+<div class="flex items-center text-success text-xs mt-2">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="ml-1">+5% vs saison passée</span>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-lg shadow-sm p-4 border border-border-light dark:border-border-dark">
+<h3 class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark">Victoires à domicile</h3>
+<p class="text-3xl font-bold text-primary mt-1">43%</p>
+<div class="flex items-center text-danger text-xs mt-2">
+<span class="material-symbols-outlined text-sm">trending_down</span>
+<span class="ml-1">-2% vs saison passée</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="sticky bottom-0 bg-card-light dark:bg-card-dark border-t border-border-light dark:border-border-dark">
+<div class="max-w-md mx-auto px-4 h-16 flex justify-around items-center">
+<a class="flex flex-col items-center text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-xs font-medium">Dashboard</span>
+</a>
+<a class="flex flex-col items-center text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="text-xs font-medium">Stats</span>
+</a>
+<a class="flex flex-col items-center text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">emoji_events</span>
+<span class="text-xs font-medium">Ligues</span>
+</a>
+<a class="flex flex-col items-center text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profil</span>
+</a>
+</div>
+</nav>
+</div>
+
+</body></html>

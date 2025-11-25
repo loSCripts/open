@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SportStats - Tableau de bord</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": {
+                            DEFAULT: "#34D399", // Vivid Emerald Green
+                            "light": "#A7F3D0"
+                        },
+                        "secondary": "#60A5FA", // Bright Blue
+                        "tertiary": "#FBBF24", // Sunny Yellow
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#111827",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1F2937",
+                        "text-light": "#111827",
+                        "text-dark": "#F9FAFB",
+                        "subtle-light": "#6B7280",
+                        "subtle-dark": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+        .icon-sm { font-size: 1.25rem; }
+        .icon-md { font-size: 1.5rem; }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap px-4 py-3 bg-background-light dark:bg-background-dark sticky top-0 z-20">
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center p-2 rounded-full bg-surface-light dark:bg-surface-dark shadow-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+</div>
+<div class="flex flex-col items-center text-center">
+<h1 class="text-lg font-bold leading-tight tracking-tight">Football</h1>
+<p class="text-xs text-subtle-light dark:text-subtle-dark">France - Ligue 1</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center p-2 rounded-full bg-surface-light dark:bg-surface-dark shadow-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 flex-col pb-20">
+<div class="p-4">
+<div class="p-1.5 bg-gray-200/50 dark:bg-gray-700/50 rounded-full flex items-center justify-around">
+<button class="w-full text-center text-sm font-semibold p-2 rounded-full bg-surface-light dark:bg-surface-dark text-primary dark:text-primary-light shadow-sm">Général</button>
+<button class="w-full text-center text-sm font-medium p-2 rounded-full text-subtle-light dark:text-subtle-dark">Équipes</button>
+<button class="w-full text-center text-sm font-medium p-2 rounded-full text-subtle-light dark:text-subtle-dark">Joueurs</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 px-4">
+<div class="flex flex-col items-start justify-center gap-2 rounded-xl p-3 bg-primary/10 dark:bg-primary/20 text-left col-span-2">
+<div class="flex items-center gap-2">
+<div class="p-2 bg-primary/20 rounded-full">
+<span class="material-symbols-outlined icon-md text-primary">emoji_events</span>
+</div>
+<div>
+<p class="text-[11px] font-medium text-subtle-light dark:text-subtle-dark">Meilleur Buteur</p>
+<p class="text-base font-bold text-primary">K. Mbappé (27)</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-start justify-center gap-2 rounded-xl p-3 bg-secondary/10 dark:bg-secondary/20 text-left">
+<div class="p-2 bg-secondary/20 rounded-full">
+<span class="material-symbols-outlined icon-sm text-secondary">sports_soccer</span>
+</div>
+<p class="text-xs font-medium text-subtle-light dark:text-subtle-dark">Buts</p>
+<p class="text-2xl font-bold text-secondary">856</p>
+</div>
+<div class="flex flex-col items-start justify-center gap-2 rounded-xl p-3 bg-tertiary/10 dark:bg-tertiary/20 text-left">
+<div class="p-2 bg-tertiary/20 rounded-full">
+<span class="material-symbols-outlined icon-sm text-tertiary">style</span>
+</div>
+<p class="text-xs font-medium text-subtle-light dark:text-subtle-dark">Cartons / match</p>
+<p class="text-2xl font-bold text-tertiary">3.4</p>
+</div>
+</div>
+<div class="p-4 space-y-4">
+<div class="flex flex-col gap-3 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm">
+<h3 class="text-base font-bold text-text-light dark:text-text-dark">Classement</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs">
+<thead>
+<tr class="border-b border-gray-200 dark:border-gray-700">
+<th class="py-2 pr-2 font-semibold text-subtle-light dark:text-subtle-dark">#</th>
+<th class="py-2 px-2 font-semibold text-subtle-light dark:text-subtle-dark">Équipe</th>
+<th class="py-2 px-1 text-center font-semibold text-subtle-light dark:text-subtle-dark">J</th>
+<th class="py-2 px-1 text-center font-semibold text-subtle-light dark:text-subtle-dark">DB</th>
+<th class="py-2 pl-2 text-right font-semibold text-subtle-light dark:text-subtle-dark">Pts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-gray-200 dark:border-gray-700/50">
+<td class="py-2.5 pr-2 font-medium">1</td>
+<td class="py-2.5 px-2 flex items-center gap-2 whitespace-nowrap"><img class="size-5" data-alt="Paris SG logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLMR39lPRL7pJPhk6ZAatdP2qnKgbG8BU58EOnT31ILoQl4bgIlYse4bFyDCRKToSa3DkSvYYVcI2tV-j_HaPOoZvd0wXDKOlse4H4NbcLGKqgWObjhAnhgcUlfYgrAajBgg399VWBq6wmhdKK0GVj1tylzqyZ5SI4fCRLEYfVDWlv9G_7sus7kTVwvQduRvdbiaUT5yqPF5ntYMZWCke-vySVjt7iGBtUpGxajFyYt9VSq31CSoBOVBis4ww2-iKUweQjGX6ykyXm"/> <span class="font-medium">Paris SG</span></td>
+<td class="py-2.5 px-1 text-center text-subtle-light dark:text-subtle-dark">34</td>
+<td class="py-2.5 px-1 text-center text-subtle-light dark:text-subtle-dark">+48</td>
+<td class="py-2.5 pl-2 text-right font-bold">76</td>
+</tr>
+<tr class="border-b border-gray-200 dark:border-gray-700/50">
+<td class="py-2.5 pr-2 font-medium">2</td>
+<td class="py-2.5 px-2 flex items-center gap-2 whitespace-nowrap"><img class="size-5" data-alt="AS Monaco logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD87bRuLqiaMlcoas3mE8U4qPBXTWTEfFKMYJYxkIHMXDGwB2mWdvGOW1ZR9EvWx7GKEkJ7gFr3S_iXGAOkY09o4Y2Vp8Itt9F2jFsZBM36PGNrTVE5jvzs3fbxw8bSuDDWSfErm6mrhD7ZgMex_i3rcFh9qNWUGPjU-9OM3ZJCekOOs9ifScat_eolVlDjgVeBbPDNDaLb7epRfyFR2QPL6Ocdc0I3_jnvaMoFUtxkuiT6zWlKtFDie7mzCX8hP-seBv7R6o6-cEYi"/> <span class="font-medium">AS Monaco</span></td>
+<td class="py-2.5 px-1 text-center text-subtle-light dark:text-subtle-dark">34</td>
+<td class="py-2.5 px-1 text-center text-subtle-light dark:text-subtle-dark">+26</td>
+<td class="py-2.5 pl-2 text-right font-bold">67</td>
+</tr>
+<tr class="border-b border-gray-200 dark:border-gray-700/50">
+<td class="py-2.5 pr-2 font-medium">3</td>
+<td class="py-2.5 px-2 flex items-center gap-2 whitespace-nowrap"><img class="size-5" data-alt="Stade Brestois logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCosSGtdNQ1eLa0RkNs_11EXa45KE_LqpkR3szztcGVhPc7v4y9HQCXYoC3mOvO4y897HRXJyzzs7UjRJ2fslYpb0WDHapQJDPb4Dn5uya5m3BGuNWIei0xNcZ7Xk3NAo463BKULGvwKtr-zP4T_gWadqUOn1b3dchlO13yXg8K1DQyFJnJSaZMJQNy_P63P1Cumz4n2KC9BVIjZ_vSa6ZuPI7eBccbigSwyApaGWNhINH578ZoC1QYEKbMDQscBrn_C7O-q4uXJDaL"/> <span class="font-medium">Stade Brestois</span></td>
+<td class="py-2.5 px-1 text-center text-subtle-light dark:text-subtle-dark">34</td>
+<td class="py-2.5 px-1 text-center text-subtle-light dark:text-subtle-dark">+19</td>
+<td class="py-2.5 pl-2 text-right font-bold">61</td>
+</tr>
+<tr>
+<td class="py-2.5 pr-2 font-medium">4</td>
+<td class="py-2.5 px-2 flex items-center gap-2 whitespace-nowrap"><img class="size-5" data-alt="Lille OSC logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs2LEebVQPsM1bYsO1ESNV-hsQgrMXppN9-7L3rkgHmm2PxiwXD9hU9mnd5CmZ8jnqrDRkaJ1uT5rVvhPaVE5DbC0qLNVBUIBDL3ZGO5wcrWkZK4oTloRqzVXEIm0vkMcoy-C79PfVhPh6VUqyXHrA-cYwwm2AQjx3mt2o2h5PHaNQG1JlC_SBE2vEoS-wvA_yD7EAfK44QtmA6rq4PovBYQYzpP0KBppN6CKOLV95d9RTRMJ4XHGuunrZhSfmuyXqHVsWi913KzXB"/> <span class="font-medium">Lille OSC</span></td>
+<td class="py-2.5 px-1 text-center text-subtle-light dark:text-subtle-dark">34</td>
+<td class="py-2.5 px-1 text-center text-subtle-light dark:text-subtle-dark">+18</td>
+<td class="py-2.5 pl-2 text-right font-bold">59</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button class="w-full text-center text-primary dark:text-primary-light text-sm font-semibold p-2 rounded-lg hover:bg-primary/10 transition-colors">Voir le classement complet</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-3 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm">
+<h3 class="text-base font-bold text-text-light dark:text-text-dark">Tendances</h3>
+<div class="w-full h-32 flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="Line chart showing season trends" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0aXWT6quJ-5ZrCVfCEJ1lR19kBiuv2a3n3hZY9nrVx2CBZqV-MljlSyChpPWzNBBqJ23LIl3MhfFm4dmUjjlq5Xiv3az1uENqL8I09c4_wqS3C6UlQB3qrz9f0191nMn9ldb5ahcuWhCkPo-JsXsgA2-4CN0mjFhOe69__sywugal94rvSPlGSGEdEMKgwH3q7g6e65l4g-T22YVuKSlEBlpLo7foCjhg59oVcgBpdPx955E0Rprrigstj0VNx38h0G9HfWYCnOlX"/>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm">
+<h3 class="text-base font-bold text-text-light dark:text-text-dark">Victoires</h3>
+<div class="w-full h-32 flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="Donut chart showing home vs away wins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-DB92r9qY39n27nRvJMudJD70uiLKbvDP2BX3-yMmMQ0GwITrkkYfLTiisC7Nd8ybdYCQ6ixk-58rfPaxhCN6aBB7cpsvBG4twMDZ_tOVZ-nMs8yvhoPDtPc8o2Ye-5ZlW-eKuD2bs3dW1KsGuJzhrzNhPGsvwWMfz-djh8-ooA0iTH6hSi4pj49aRXOzu1SUDzcav2kgdH_v9nsOnOXOncayriSmOXQFnz7Vk3xa6A7LxLS2TRK_oiHNDfyyNKYvBhV9c2sOJX6L"/>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-24 right-4 z-30">
+<button class="flex items-center justify-center p-4 rounded-full bg-secondary text-white shadow-lg hover:bg-secondary/90 transition-transform active:scale-95">
+<span class="material-symbols-outlined icon-md">search</span>
+</button>
+</div>
+<nav class="fixed bottom-0 left-0 right-0 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700/80 px-4 z-20">
+<div class="flex justify-around items-center h-16 max-w-md mx-auto">
+<a class="flex flex-col items-center justify-center gap-1 text-primary dark:text-primary-light" href="#">
+<span class="material-symbols-outlined icon-sm">query_stats</span>
+<span class="text-xs font-semibold">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary-light transition-colors" href="#">
+<span class="material-symbols-outlined icon-sm">compare_arrows</span>
+<span class="text-xs font-medium">Comparer</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary-light transition-colors" href="#">
+<span class="material-symbols-outlined icon-sm">emoji_events</span>
+<span class="text-xs font-medium">Ligues</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary-light transition-colors" href="#">
+<span class="material-symbols-outlined icon-sm">person</span>
+<span class="text-xs font-medium">Profil</span>
+</a>
+</div>
+</nav>
+</div>
+</div>
+
+</body></html>

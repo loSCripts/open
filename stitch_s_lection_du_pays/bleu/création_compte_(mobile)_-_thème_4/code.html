@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Open Sport - Sélectionner la ligue</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#007BFF", // Blue from the "Aquatic" theme
+            "background-light": "#F7F8FA", // A very light grey for a clean look
+            "background-dark": "#121212", // Standard dark mode background
+          },
+          fontFamily: {
+            display: ["Bebas Neue", "sans-serif"],
+            body: ["Poppins", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.75rem", // 12px
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark antialiased">
+<div class="flex flex-col min-h-screen p-6">
+<header class="w-full max-w-sm mx-auto flex items-center justify-between mb-8">
+<button class="text-slate-600 dark:text-slate-300 p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800">
+<span class="material-icons-outlined">arrow_back</span>
+</button>
+<div class="text-center">
+<h1 class="font-display text-4xl tracking-wider text-slate-800 dark:text-white">OPEN</h1>
+<div class="inline-block bg-primary px-2 py-0 rounded-md -mt-2">
+<span class="font-display text-2xl tracking-wider text-white">SPORT</span>
+</div>
+</div>
+<div class="w-10"></div> 
+</header>
+<main class="w-full max-w-sm mx-auto flex-grow">
+<div class="text-center mb-8">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Sélectionner la ligue</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-1 text-sm">France - Football</p>
+</div>
+<div class="relative mb-6">
+<span class="material-icons-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500">
+          search
+        </span>
+<input class="w-full pl-10 pr-4 py-2.5 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/50 rounded-lg text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent placeholder:text-slate-400 dark:placeholder:text-slate-500" id="search" placeholder="Rechercher une ligue..." type="text"/>
+</div>
+<div class="space-y-3">
+<a class="flex items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Ligue 1 Logo" class="w-10 h-10 object-contain mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcSqb8EA-yWyTwtq4Nl0tHYyDUXq2npoRw-uCWaAvZZuI5cHbUjFN3j8-OXYBdOoOR7u9eXbXTcdyTXTjrPwBjn96C9VNKxj-OmbqGJdzJMHlreIzucnq1t7W8EnW6klDqWC7GvLyFFG1TeC7wSW7g3PKDyQg70Wj_UOG623WRqsCuRc9Z78Ezax9cRsiiwyUCRw8TK09bj8sUb3vWkja1HCqlnqtQB1wgVe0tRM_vS8CvoNTTiqLCVzENUvmvXpMqW0ZQt9SrXPUK"/>
+<span class="font-semibold text-slate-800 dark:text-slate-200 flex-grow">Ligue 1 Uber Eats</span>
+<span class="material-icons-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+<a class="flex items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Ligue 2 Logo" class="w-10 h-10 object-contain mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARNa4OXWZOotMVPzRyS_1FSv5lg58L1WxSYgTfcb91sXWi34UHlh8483aXzDLthlrzLqX0I0TZJqdMDMYuOqbT0pj4rAPi-PJKYizY3lbJOT-OjIUaKtUUYyIBXXl_j_J4dWi8U8BH1-1i1fko9VDJE9VltbOjVltEk-mqx1z0Dto4mlicZ9aFy15PdXIgnSNCwuMOAWnpocYbniZ1b_RhB7ST4P7VJ7hdq_LxtP9vZM-afJmFPBWatxnMdJ1riM09MV8jWVIAy-vi"/>
+<span class="font-semibold text-slate-800 dark:text-slate-200 flex-grow">Ligue 2 BKT</span>
+<span class="material-icons-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+<a class="flex items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Coupe de France Logo" class="w-10 h-10 object-contain mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs5-7xnWvLDb2NA81G1tE7wLUSzhJ7HPilwSm83cTGYyH1eUuaXJ1qyWSSNrKxS9kQxL6DF3q3qH83MYHBShHb6Lt1Al_QdfgN42fqj-chGO-GYpXCy5PzJ4nL7SB6fDOYWzHG8fe1CsWLw9cCRGbAOjZoAJlpoOXp1v3Uro4CAyHTuJRoHsYf5NTi032u5MrvTF4WJoMvvEbzghWHj1ddVNEauH4kxrfyDt75qMJVljSPIq362IRJpHXKjEdkO5Ke02Shlt31iizd"/>
+<span class="font-semibold text-slate-800 dark:text-slate-200 flex-grow">Coupe de France</span>
+<span class="material-icons-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+<a class="flex items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="D1 Arkema Logo" class="w-10 h-10 object-contain mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz6Gz1-Rqz3VKMMfx_hqZqPl_nl1FLjlTXwHgpLzZe8RXvKAeWqlXwfrEe2bBL9oqhayLk04AO3bxY40qaU3ZRdwV3pvZTzV94oEHbWoSd9iqW0WtdDv2-uaB9Lak2GM2wgqd-3xRAPHFY-6OQ3mXfrdXueQ0Pi5jfmr53OFT8EjTSztIPhTmx4Ho8IH9gIcqOulK4f0UAqv8_1XjU2P-oAzBSQEsj9BFWlOSq1ex1F79WQhVtwhAncsiW6ieraM8UAdTZFxK0t6ve"/>
+<span class="font-semibold text-slate-800 dark:text-slate-200 flex-grow">D1 Arkema</span>
+<span class="material-icons-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+</div>
+</main>
+</div>
+
+</body></html>

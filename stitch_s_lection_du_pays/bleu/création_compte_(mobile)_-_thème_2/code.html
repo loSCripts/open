@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Open Sport - Choisir un Pays</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#007BFF", // Blue from the "Aquatic" theme
+              "background-light": "#F7F8FA", // A very light grey for a clean look
+              "background-dark": "#121212", // Standard dark mode background
+            },
+            fontFamily: {
+              display: ["Bebas Neue", "sans-serif"],
+              body: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem", // 12px
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark antialiased">
+<div class="flex flex-col h-screen p-6">
+<header class="flex-shrink-0">
+<div class="text-center">
+<h1 class="font-display text-5xl tracking-wider text-slate-800 dark:text-white">OPEN</h1>
+<div class="inline-block bg-primary px-3 py-0.5 rounded-md -mt-2">
+<span class="font-display text-2xl tracking-wider text-white">SPORT</span>
+</div>
+</div>
+<div class="text-center mt-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Choisir un pays</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-1 text-sm">Pour le sport: Football</p>
+</div>
+<div class="relative mt-6">
+<span class="material-icons-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500">
+                search
+            </span>
+<input class="w-full pl-10 pr-4 py-2.5 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-primary focus:border-transparent placeholder:text-slate-400 dark:placeholder:text-slate-500" id="search" placeholder="Rechercher un pays..." type="search"/>
+</div>
+</header>
+<main class="flex-grow overflow-y-auto mt-6 -mx-6 px-6">
+<div class="grid grid-cols-3 gap-4">
+<a class="flex flex-col items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Drapeau France" class="w-10 h-auto rounded-md object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyOtmwhkd6NbqhELIkePmbNCkZcnZwHi5rcd304xy1g4SiA0r8pn7mhyZo2Qdq1Ndb9HnEPDr_BMMYtl_47SBY5GK7Ws7rngjOhZKNXyFA0I-wdcu2Npg2YNX9VEHb6DjDKFPT5NctxCbI5fG1Kx2Qzff77o0xOK1bl3zqRxj3wvzxWmQMMUjua7sSyS0fOYHbDGrgX1JFVxGhVqn5WPVJtwCcg3bwL7NXE2aIbuSv4mHJHvfDOJsGE2DfyOh5R6oceD8Vqhk7NXMP" srcset="https://flagcdn.com/w160/fr.png 2x" width="40"/>
+<span class="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200 text-center">France</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">FRA</span>
+</a>
+<a class="flex flex-col items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Drapeau Espagne" class="w-10 h-auto rounded-md object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpc5wb0qowkNzgFBZPo5kOUivCA2z0eUNnZO1CJo8rsInrgntAspxbUuVgHbbI0ATyrLzChN6-VMuE2XgkeW-oSsBTtRGfam3-JpJwD7kfqJh8Wa-Vy4dnPqA-HGOZgXiVwlCcfimzE-wizm7sWj_ODUzr2Rr3qRH27xuv2zT3SRCQwb36ZLe5j0-o76XaIfVRft3mijFgBU0CF2o7q3uBjBmqOrjD4ZbQzZstzCdRzNM0kGioR7lycREveOU1OCPg-sNmnrzMe54S" srcset="https://flagcdn.com/w160/es.png 2x" width="40"/>
+<span class="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200 text-center">Espagne</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">ESP</span>
+</a>
+<a class="flex flex-col items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Drapeau Royaume-Uni" class="w-10 h-auto rounded-md object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR_aad3a5VvY-qG21PC5KC6ertIrvJ38tzlWe1vKahCwrKt48hh6BQxb8Rz2EanE08q0QGsnPu9q7JeSTJHaKfu7hdgEDMeDAVz6YoqtYAVw67BQ2aPL3aXEwOG9Xg1HfkxLpalU4azqkx6hgq77ZBv8XMkYH1D1Ico8f1ol0bwRgERcfEXNsow1jEaqg93EOZpf3jh210X2___dCIVNagZxKfa_5KR8ONu7Ib8W2uBwxVZ_hsE_Ll0ZPd4eGnbggf2u3D8QQlquoE" srcset="https://flagcdn.com/w160/gb.png 2x" width="40"/>
+<span class="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200 text-center">Angleterre</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">ENG</span>
+</a>
+<a class="flex flex-col items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Drapeau Allemagne" class="w-10 h-auto rounded-md object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3xK5WD7zofFyyT8VGCtrqRu8D14K5f5cTOeECCO82hw2fWfiA4oFNM-l4uS05LOtKOArPXhfLFYbbz-5d8fb6HRZY3Tf_aBgF4sQKUtUdWdHgpKkyZOVg8jijfdv7dd6eZNkGaeVH6n8uUSEqE14EfROhINb3S4M-CpfpLm2iIbwBcal8BtWlFFcTEGBqB8sdHbYAnRtlYU8IK2LSTziaHgkgjXLOOGDw65Ska5JKYBCrn96eufCTPuHnJpQ_HWqp3Eu2Cj-KDX2R" srcset="https://flagcdn.com/w160/de.png 2x" width="40"/>
+<span class="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200 text-center">Allemagne</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">GER</span>
+</a>
+<a class="flex flex-col items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Drapeau Italie" class="w-10 h-auto rounded-md object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCy4vZsnWodNSbM37_6ojOJB9xVIMNyR3XmtSSjbjUkP-LZ70WRPoYvoJeB5Aq9XnOeNXuQjBkeYw_FGlHdqTRjyqG84VlwSLYXxXNDdiLjcY9y0E0D1EJZjRxk0tISxs-eu8nkFvVRNibHY5lJigYSDi0Y_RhmapflI_vq4tZ4M6fM7iPpdVvpR5f4_MirL755DMijRqlveoF3_KBcSbeOJP5Bpf3m--VM0w_xuztBVV0kxv4EPlcHkKDvqO0SPeqfUiSkxa3kTQ1" srcset="https://flagcdn.com/w160/it.png 2x" width="40"/>
+<span class="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200 text-center">Italie</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">ITA</span>
+</a>
+<a class="flex flex-col items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Drapeau Brésil" class="w-10 h-auto rounded-md object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtyzOY_okVrroRj8H7rkduNL1JgJ6L98l0BHJKjpcjyUVzKXBuprJld8wlDk1tYTJalnkZdKPwhWLy2Wb5L3Syh3G9RpkQUo5fPpL3tIQbnSsUGvjlATwDg8vIcQsR1jKBEF6yLeLNbou0h5Osy16RyB_RxnhnedifbqDdlxoeucCGkAGiP7dboReJN2a4x6MSpTWvrO0xZL5aMeYbeCHx1kUSM5cJ1IcrL7tKCXrKkUUEw-PE_zapvbYjl1YUVNaTVBgN45Y5JWLm" srcset="https://flagcdn.com/w160/br.png 2x" width="40"/>
+<span class="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200 text-center">Brésil</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">BRA</span>
+</a>
+<a class="flex flex-col items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Drapeau Portugal" class="w-10 h-auto rounded-md object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDocO_Fbki-DwDk6wkSKi4KmZbpK4VnM4kVyIEI9ql-fiLyIh2cMcMAf9AfnAXOlYwQFIIgBvG72qCtuz3LlSVSgL4zA2tRX0cSYtUTYIpXhyC-UEznUHsdsx5bI56YdKiRIh6CPmcE2LU2cxbY7ABFOazGbV0FsKHlMIt2mFF1O3wUHMTnvhIJh2SRcJSBD_ss_j2ziOl9UasFSo9jNv44qEPOqURtzxrX8Ckbn6FK6kTdIQm8u9pV7nOHkO9y_xuiSyB2ucc83k0q" srcset="https://flagcdn.com/w160/pt.png 2x" width="40"/>
+<span class="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200 text-center">Portugal</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">POR</span>
+</a>
+<a class="flex flex-col items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Drapeau Pays-Bas" class="w-10 h-auto rounded-md object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABF35gcZ_Tsjs1GiWAwmsC9459NmuEY6omNb_vV6HS18iqQoDcZ0EXRPFJLeqTBA-oujh-Y5Qk3XnzZx84q9CRLaiQY9yWatf9Q-SRQBjQrrfBvkvcvyeWQwyQkBm4Kc7hPsiJbD0G1yq4HE-9wUMqJYW6lg9WRmzHumj6oLikezGExglfBj7QIHnuhUy-Zvf5ocWQI-JHMsSCc7a8jyMtJGFOy8Ov1vnHRPDnC4rA0kRDpXf1FMfhK1tCG2TWqsWjwag9ol56wCfF" srcset="https://flagcdn.com/w160/nl.png 2x" width="40"/>
+<span class="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200 text-center">Pays-Bas</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">NED</span>
+</a>
+<a class="flex flex-col items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Drapeau Argentine" class="w-10 h-auto rounded-md object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ZC9j9OXWh6iJKvwy-3OPeyG4uY1Dhjo2hXtyBzQT0H5LmMf0WJSVGxH7E8Iyn3SIv8zEoWCHsIA1hUo3lswShNDlYOJMFH_dCB1xTVHjQf4Hz07kwo202R_OmOJU7tKF7vjpjrqAgGWsIw4STri7OtMNWaPihVenjIIWvYgQwBbH6JWijKfcn2xA8vQVWaWfPyWGNQLru7Zw-c_F8h6-Ha-RrkkAaBgF4ZkwFYhWi51wwDOovzK5wmzzwePpaIv7vsQ4nyDIz4hG" srcset="https://flagcdn.com/w160/ar.png 2x" width="40"/>
+<span class="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200 text-center">Argentine</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">ARG</span>
+</a>
+<a class="flex flex-col items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Drapeau Belgique" class="w-10 h-auto rounded-md object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASTc3BOz7kozkHzzBtPVlw-WguZIIQZbPCyIux6FiD-Ju37nxeKJy4LByCyr0EvLE6WU1J6E3QTDxhhuRAKbrFMuhhRtMzr4W1BU2DiC12xTj5JorIXFn-KTslGvotSRgZWHi-qEsXVqUPMAdW6xxuAQuPIzm1aF_gMJZOeDebhpjgKwH-5OKU_AIgbEG0byM50YzHuv-s5lOb-Dp9pDC-t-l1mwXnG5Y289dBjUUzwQLWjmkmcwsyWcdIdlvNEhCXQ_-xvVaAUiug" srcset="https://flagcdn.com/w160/be.png 2x" width="40"/>
+<span class="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200 text-center">Belgique</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">BEL</span>
+</a>
+<a class="flex flex-col items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Drapeau États-Unis" class="w-10 h-auto rounded-md object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIUdG_ebFKGT3QjXtySn3puQt7OY2YCZ2tgK-DZPSTclVpKfXHThKSj23klAGYgUUsL7Rqpo8ZT3I4-a3tsJSoy_vHOSOFxdFJdjAKF_juPhbXPXmc3juzp_aebXAdunK1N_8T7zRTO6XaGd8AP7Iui6AlYRvitoRe3IDl5_9p5gWQzDkUUHIaSosLwTAAM-PERU5QDVQ8WrIVsFVFTF6GwPPyjNUAOBogirKUeFKQhrBPAg79GDdZKgqauKTHJBvClQSXY123w8L6" srcset="https://flagcdn.com/w160/us.png 2x" width="40"/>
+<span class="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200 text-center">États-Unis</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">USA</span>
+</a>
+<a class="flex flex-col items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<img alt="Drapeau Japon" class="w-10 h-auto rounded-md object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVqkGkLfvLGuJm6DW7eVx9tAimym58v2HSKATEfhoaXVekyERL0tilJY0Xsmn89F9eJJ5DfoASAd2vUaLbPXOaGBpGdfCr_BGaWcFtZwkcTE9eVA9zOZRuZ7PBLWOquUNkVSLdHU6htUDupTK5SscdmkupTIKiPe2Ljy4biE7MivZ2e1skOH3TSnLqoRSuJSJByoeE9-JnR8z3mxauBLmzNilznm00okhgq0vWwicBEX0JSNcYAfuzVTdsuW0R_MKzlBbpLn2esROc" srcset="https://flagcdn.com/w160/jp.png 2x" width="40"/>
+<span class="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-200 text-center">Japon</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">JPN</span>
+</a>
+</div>
+</main>
+<footer class="flex-shrink-0 pt-4">
+<button class="w-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold py-3 px-4 rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:focus:ring-offset-background-dark transition-colors duration-200 flex items-center justify-center" type="button">
+<span class="material-icons-outlined mr-2">arrow_back</span>
+            Retour
+        </button>
+</footer>
+</div>
+
+</body></html>
