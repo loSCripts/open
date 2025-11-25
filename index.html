@@ -27,7 +27,13 @@
                         "text-muted-light": "#608a6e",
                         "text-muted-dark": "#8fa899",
                     },
-                    fontFamily: { "display": ["Lexend", "sans-serif"] },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "xl": "1rem",
+                    },
                 },
             },
         }
@@ -39,7 +45,12 @@
         .loader { border: 3px solid #f3f3f3; border-top: 3px solid #0df259; border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         
-        /* Bannière d'alerte API */
+        /* Fallback de sécurité pour les tables si Tailwind ne charge pas */
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px 8px; text-align: left; }
+        th { font-size: 0.85em; text-transform: uppercase; color: #608a6e; }
+
+        /* Bannières d'état API */
         #api-alert-banner {
             display: none;
             background-color: #ef4444; /* Rouge */
@@ -73,7 +84,7 @@
         <span id="api-error-detail" class="text-xs font-normal opacity-90">Raison : Connexion API impossible</span>
     </div>
     <div id="api-success-banner">
-        ✅ CONNECTÉ : Données en direct de l'API SportDB
+        ✅ CONNECTÉ : Test de connectivité réussi.
     </div>
 
     <header id="main-header" class="sticky top-0 z-50 w-full border-b border-text-muted-light/20 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm">
@@ -93,12 +104,12 @@
         <section id="view-sport" class="view-section active container mx-auto px-4 py-8 max-w-6xl">
             <div class="mb-8">
                 <h1 class="text-4xl font-black tracking-tight sm:text-5xl mb-2">Choisissez votre sport</h1>
-                <p class="text-text-muted-light">Sélectionnez un sport pour consulter les statistiques.</p>
+                <p class="text-text-muted-light dark:text-text-muted-dark">Sélectionnez un sport pour consulter les statistiques détaillées.</p>
             </div>
             <div class="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-6">
                 <div onclick="selectSport('Football')" class="flex flex-col gap-3 pb-3 group cursor-pointer hover:bg-surface-light/50 p-2 rounded-xl transition-colors">
                     <div class="w-full aspect-square rounded-xl bg-gray-200 overflow-hidden relative shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1579952363873-27f3bde9be28?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        <img src="https://images.unsplash.com/photo-1579952363873-27f3bde9be28?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" alt="Football">
                     </div>
                     <div>
                         <p class="font-bold text-lg">Football</p>
@@ -112,16 +123,18 @@
             <div class="flex items-center gap-2 mb-6 text-sm text-text-muted-light">
                 <button onclick="navigateTo('view-sport')" class="hover:text-primary hover:underline">Accueil</button>
                 <span>/</span>
-                <span class="font-semibold text-text-light">Football</span>
+                <span class="font-semibold text-text-light dark:text-text-dark">Football</span>
             </div>
-            <div class="mb-8"><h1 class="text-4xl font-black tracking-tight mb-2">Pays</h1></div>
+            <div class="mb-8">
+                <h1 class="text-4xl font-black tracking-tight mb-2">Pays</h1>
+            </div>
             <div class="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-4 sm:gap-6">
                 <div onclick="selectCountry('France')" class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all dark:bg-surface-dark border border-transparent hover:border-primary/30">
-                    <div class="w-full aspect-video bg-cover rounded-lg bg-gray-200" style="background-image: url('https://flagcdn.com/w640/fr.png')"></div>
+                    <div class="w-full aspect-video bg-cover rounded-lg bg-gray-200 border border-gray-100 dark:border-gray-700" style="background-image: url('https://flagcdn.com/w640/fr.png')"></div>
                     <div><p class="font-bold">France</p><p class="text-sm text-text-muted-light">2 Ligues</p></div>
                 </div>
                 <div onclick="selectCountry('Angleterre')" class="flex cursor-pointer flex-col gap-3 rounded-xl bg-surface-light p-3 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all dark:bg-surface-dark border border-transparent hover:border-primary/30">
-                    <div class="w-full aspect-video bg-cover rounded-lg bg-gray-200" style="background-image: url('https://flagcdn.com/w640/gb-eng.png')"></div>
+                    <div class="w-full aspect-video bg-cover rounded-lg bg-gray-200 border border-gray-100 dark:border-gray-700" style="background-image: url('https://flagcdn.com/w640/gb-eng.png')"></div>
                     <div><p class="font-bold">Angleterre</p><p class="text-sm text-text-muted-light">4 Ligues</p></div>
                 </div>
             </div>
@@ -198,7 +211,8 @@
                                     <th class="py-3 pl-4 text-right">Pts</th>
                                 </tr>
                             </thead>
-                            <tbody id="standings-body"></tbody>
+                            <tbody id="standings-body">
+                                </tbody>
                         </table>
                     </div>
                 </div>
@@ -207,11 +221,11 @@
     </main>
 
     <script>
-        // --- CONFIGURATION API ---
+        // --- CONFIGURATION API CORRIGÉE ---
+        // NOUVELLE URL DE BASE (selon votre documentation)
+        const API_BASE_URL = "https://api.sportdb.dev/api/flashscore"; 
+        // Votre clé API
         const API_KEY = "EScvoEnhz3EljQ00hynWkJCrFboh3V5PmQTkxSqL"; 
-        // URL Hypothétique basée sur votre demande. 
-        // Si cette URL n'existe pas, le mode Simulation s'activera.
-        const API_BASE_URL = "https://sportdb.dev/api/v1"; 
 
         const state = { sport: null, country: null, league: null, leagueId: null };
 
@@ -224,7 +238,6 @@
             if(isOnline) {
                 alertBanner.style.display = 'none';
                 successBanner.style.display = 'block';
-                // Cache le succès après 3s pour ne pas gêner
                 setTimeout(() => { successBanner.style.display = 'none'; }, 3000);
             } else {
                 successBanner.style.display = 'none';
@@ -268,7 +281,7 @@
             fetchData(league);
         }
 
-        // --- CŒUR DE L'INTÉGRATION API ---
+        // --- CŒUR DE L'INTÉGRATION API CORRIGÉE ---
         async function fetchData(league) {
             const tableBody = document.getElementById('standings-body');
             const loader = document.getElementById('loader-table');
@@ -276,46 +289,54 @@
             tableBody.innerHTML = '';
             loader.classList.remove('hidden');
 
-            // Valeurs par défaut pour reset
             document.getElementById('stat-total-goals').innerText = "-";
             document.getElementById('stat-top-scorer-name').innerText = "-";
             document.getElementById('stat-matches').innerText = "-";
 
+            // Endpoint pour le classement (standings) (ASSUMÉ)
+            // L'API n'ayant pas de doc publique, nous supposons un endpoint logique pour le classement :
+            // /football/standings?league_id=XXX ou /leagues/XXX/standings
+            const url = `${API_BASE_URL}/football/standings?league_id=${state.leagueId}`;
+            
             try {
-                // Construction de l'appel API
-                // On passe le token en Header ET en query param pour maximiser la compatibilité
-                const url = `${API_BASE_URL}/leagues/${state.leagueId}/standings?api_token=${API_KEY}`;
+                console.log(`Tentative de connexion (API SportDB) à: ${url}`);
                 
-                console.log(`Tentative de connexion à: ${url}`);
-                
+                // 🔑 UTILISATION DE L'EN-TÊTE 'X-API-Key'
                 const response = await fetch(url, {
                     method: 'GET',
                     headers: {
-                        'Authorization': `Bearer ${API_KEY}`,
-                        'Accept': 'application/json'
+                        'X-API-Key': API_KEY 
                     }
                 });
-
+                
+                if (response.status === 401 || response.status === 403) {
+                    throw new Error(`Erreur 401/403: Clé API (${API_KEY}) invalide ou accès refusé. Vérifiez l'en-tête 'X-API-Key'.`);
+                }
+                if (response.status === 404) {
+                    throw new Error(`Erreur 404: Endpoint non trouvé pour le classement de la ligue ID ${state.leagueId}. L'URL d'API est peut-être incorrecte.`);
+                }
                 if (!response.ok) {
-                    throw new Error(`Erreur HTTP ${response.status} (${response.statusText})`);
+                    throw new Error(`Erreur HTTP ${response.status} : ${response.statusText}`);
                 }
 
                 const json = await response.json();
                 
-                // Si succès
+                // Si le code arrive ici, la connexion a fonctionné !
                 setApiStatus(true);
-                // NOTE: Il faudrait mapper ici les données JSON réelles de l'API vers renderData()
-                // Comme on ne connait pas la structure exacte de sportdb.dev, on envoie le json au render
-                // renderData(json); 
-                
-                // Pour l'instant, on simule que l'API renvoie des données Mock structurées
-                // Dans un cas réel, il faut adapter json.data vers notre structure
-                throw new Error("Structure API inconnue (Simulation pour démo)");
+                console.log("Connectivité établie. Données réelles :", json);
+
+                // TODO: PARSER les données réelles de 'json' et appeler renderData()
+
+                throw new Error(`Connexion OK, mais l'API réelle n'a pas été parsée. Passage en mode simulation.`);
 
             } catch (error) {
-                // C'est ICI qu'on gère le fallback
+                // Gestion du fallback
                 let message = error.message;
-                if (message === "Failed to fetch") message = "Échec connexion (CORS ou URL invalide)";
+                if (message.includes("Failed to fetch")) {
+                    // Cette erreur est toujours possible si l'URL est bloquée (même si le fichier est hébergé)
+                    // ou si le serveur est simplement hors ligne.
+                    message = "Échec réseau général (Erreur DNS, serveur indisponible, ou blocage CORS/sécurité)";
+                }
                 
                 setApiStatus(false, message);
                 
@@ -335,6 +356,7 @@
 
             // Tableau
             const tableBody = document.getElementById('standings-body');
+            tableBody.innerHTML = ''; // Nettoyer le tableau avant d'insérer
             data.standings.forEach((team, index) => {
                 let logoHtml = team.logo 
                     ? `<img src="${team.logo}" class="w-full h-full object-contain p-0.5">` 
